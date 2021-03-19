@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="solo_js.js"></script>
+    <title>Test Page for js</title>
+</head>
+
+<body>
+    <div>
+        <button onclick='btn_01()'>year2zodiac</button>
+    </div>
+    <div>
+        <p id='answer'></p>
+    </div>
+    <div>
+        <img src="" alt="">
+    </div>
+    <script>
+        function btn_01() {
+            let year = Number(prompt('태어난 연도를 입력하세요.', 1989));
+
+            var tag_p = document.getElementById('answer');
+            tag_p.innerText = SexagenaryCycle(year);
+
+            var img = document.getElementsByTagName('img');
+            img[0].setAttribute('src', Zodiac2Image(year));
+        }
+
+        window.onload = function () {
+            //
+            // ArrTest();
+            // ForLoop();
+            var tag_p = document.getElementById('answer');
+            tag_p.innerText = `Quiz01() = ${Quiz01()}\nQuiz02() = ${Quiz02()}`;
+        }
+    </script>
+</body>
+
+</html>
