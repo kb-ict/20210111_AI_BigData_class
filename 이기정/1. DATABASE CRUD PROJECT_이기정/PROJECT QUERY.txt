@@ -1,0 +1,162 @@
+--테이블 생성
+create table Student(
+stuNo number(8,0) primary key,
+stuName varchar2(20) not null,
+phone varchar2(13),
+address varchar2(20),
+grade char(1),
+city varchar2(10)
+);
+
+--테이블 내 값 입력
+insert into student values('101','이상아','010-1234-1234','문경시 100','1','문경');
+insert into student values('102','이상영','010-2222-1234','안동시 134','1','안동');
+insert into student values('203','박세연','010-3333-1234','구미시 52','2','구미');
+insert into student values('204','김세진','010-4444-1234','구미시 52','2','구미');
+insert into student values('205','윤혜민','010-5555-1234','구미시 52','2','구미');
+insert into student values('306','박시혁','010-6666-1234','상주시 300','3','상주');
+insert into student values('107','최송빈','010-7777-1234','상주시 250','1','상주');
+insert into student values('308','김재준','010-8888-1234','김천시 30','3','김천');
+insert into student values('209','박정연','010-3535-1234','김천시 7','2','김천');
+insert into student values('210','편준영','010-1177-1234','영천시 473','2','영천');
+insert into student values('111','최제빈','010-7799-1234','안동시 101','1','안동');
+insert into student values('112','박준헌','010-3535-1234','경주시 1056','1','경주');
+insert into student values('213','민준후','010-2345-1234','경주시 1154-1','2','경주');
+
+--학번으로 오름차순 정렬해서 조회
+select * from student order by stuNo asc;
+
+--기숙사 신청하고 기숙사 보증금을 낸 학생 파악을 위한 열 등록
+alter table student
+add deposit number(10,0);
+alter table student
+add domitory char(1);
+
+--멘토 등록
+alter table student
+add mentorID number(4);
+alter table student
+add constraint mentor
+FOREIGN key (mentorID)
+references employees(employee_id);
+
+--mentorID에 값 입력
+update student set mentorID=103 where stuNo=101;
+
+--1학년인 경우, 멘토번호가 103번
+--2학년인 경우 104번, 3학년인 경우 105번의 멘토번호를 넣기
+UPDATE STUDENT SET MENTORID=
+CASE
+        when (grade='1') then 103
+        when (grade='2') then 104
+        when (grade='3') then 105
+End;
+    
+
+--DOMITORY 값 업데이트
+update student set domitory='Y'
+where substr(stuno,2,2)>=6;
+
+update student set domitory='N'
+where substr(stuno,2,2)<=5;
+
+--deposit 값
+--기숙사 생들에게 deposit 1000원 추가
+--경주에 사는 사람은 deposit 1000원 더 추가
+update student set DEPOSIT= 
+case
+    when domitory='Y' then        1000
+    +(case when city='경주' then 1000
+            else 0 end)
+    when domitory='N' then         0
+end ;
+
+--조인으로 출력결과 보기
+select s.stuName, e.employee_id, e.first_name
+from student s left outer join employees e
+on s.mentorid = e.employee_id;
+
+
+--프로시저 만들기
+--추가
+create or replace PROCEDURE add_student
+(p_stuno student.stuno%type,
+p_stuname student.stuname%type,
+p_phone student.phone%type,
+p_address student.address%type,
+p_grade student.grade%type,
+p_city student.city%type,
+p_deposit student.deposit%type,
+p_domitory student.domitory%type,
+p_mentorid student.mentorid%type
+)
+IS
+BEGIN
+    INSERT INTO student(stuno, stuname, phone, address, grade, city, deposit, domitory, mentorid)
+    VALUES(p_stuno, p_stuname, p_phone, p_address, p_grade, p_city,
+            p_deposit, p_domitory, p_mentorid);
+    commit;
+END add_student;
+
+--조회
+create or replace PROCEDURE SELECTALLCOLUMN_STUDENT  
+ (
+ p_cursor OUT SYS_REFCURSOR)
+ IS
+ BEGIN
+ OPEN p_cursor FOR
+ SELECT *
+ FROM STUDENT;
+END SELECTALLCOLUMN_STUDENT;
+
+--삭제
+create or replace PROCEDURE del_student
+			--PK받음
+  (p_stuno student.stuno%type      )
+   
+IS
+     zeroDelete Exception;
+ BEGIN
+     delete 
+	from student 
+	where stuno=p_stuno;--입력한 행 하나 지움
+     if SQL%Notfound then
+        Raise zeroDelete;
+     end if;
+     exception
+       when zeroDelete then
+       dbms_output.put_line(p_stuno || '해당 데이터가 없습니다.');
+    commit;
+END del_student;
+
+--수정
+create or replace PROCEDURE update_student
+  (  p_stuno student.stuno%type,
+p_stuname student.stuname%type,
+p_phone student.phone%type,
+p_address student.address%type,
+p_grade student.grade%type,
+p_city student.city%type,
+p_deposit student.deposit%type,
+p_domitory student.domitory%type,
+p_mentorid student.mentorid%type
+   )
+IS
+ BEGIN
+      update student
+      set 
+         stuno = p_stuno,
+         stuname = p_stuname,
+         phone = p_phone,
+         address = p_address,
+         grade = p_grade,
+         city = p_city,
+         deposit = p_deposit,
+         domitory = p_domitory,
+         mentorid = p_mentorid
+      where stuno = p_stuno;
+      commit;
+      exception
+      when no_data_found then
+      dbms_output.put_line('오류 발생');
+END update_student;

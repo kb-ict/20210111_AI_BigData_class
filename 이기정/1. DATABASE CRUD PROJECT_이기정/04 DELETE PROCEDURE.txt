@@ -1,0 +1,18 @@
+create or replace PROCEDURE del_student
+			--PK받음
+  (p_stuno student.stuno%type      )
+   
+IS
+     zeroDelete Exception;
+ BEGIN
+     delete 
+	from student 
+	where stuno=p_stuno;--입력한 행 하나 지움
+     if SQL%Notfound then
+        Raise zeroDelete;
+     end if;
+     exception
+       when zeroDelete then
+       dbms_output.put_line(p_stuno || '해당 데이터가 없습니다.');
+    commit;
+END del_student;

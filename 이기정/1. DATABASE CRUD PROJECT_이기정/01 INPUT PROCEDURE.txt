@@ -1,0 +1,18 @@
+create or replace PROCEDURE add_student
+(p_stuno student.stuno%type,
+p_stuname student.stuname%type,
+p_phone student.phone%type,
+p_address student.address%type,
+p_grade student.grade%type,
+p_city student.city%type,
+p_deposit student.deposit%type,
+p_domitory student.domitory%type,
+p_mentorid student.mentorid%type
+)
+IS
+BEGIN
+    INSERT INTO student(stuno, stuname, phone, address, grade, city, deposit, domitory, mentorid)
+    VALUES(p_stuno, p_stuname, p_phone, p_address, p_grade, p_city,
+            p_deposit, p_domitory, p_mentorid);
+    commit;
+END add_student;

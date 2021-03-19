@@ -1,0 +1,30 @@
+create or replace PROCEDURE update_student
+  (  p_stuno student.stuno%type,
+p_stuname student.stuname%type,
+p_phone student.phone%type,
+p_address student.address%type,
+p_grade student.grade%type,
+p_city student.city%type,
+p_deposit student.deposit%type,
+p_domitory student.domitory%type,
+p_mentorid student.mentorid%type
+   )
+IS
+ BEGIN
+      update student
+      set 
+         stuno	=	p_stuno,
+         stuname	=	p_stuname,
+         phone	=	p_phone,
+         address	=	p_address,
+         grade	=	p_grade,
+         city	=	p_city,
+         deposit	=	p_deposit,
+         domitory	=	p_domitory,
+         mentorid	=	p_mentorid
+      where stuno = p_stuno;
+      commit;
+      exception
+       when no_data_found then
+        dbms_output.put_line('오류 발생');
+END update_student;
