@@ -1,0 +1,36 @@
+-- pagination v1
+create or replace PROCEDURE proc_lib_pagination 
+(
+  start_number IN NUMBER 
+, end_number IN NUMBER 
+, order_column IN VARCHAR2 
+, direction_bool IN CHAR 
+, RESULT_CURSOR OUT SYS_REFCURSOR
+) AS 
+BEGIN
+    if direction_bool = 'y' then
+        open result_cursor for
+            SELECT sub.*
+            FROM   (SELECT sub2.*, rownum AS rnum
+                    FROM   (
+                        select *
+                        from lib_books
+                        order by order_column asc
+                    ) sub2
+                    WHERE rownum <= end_number) sub
+            WHERE  rnum > start_number;
+    elsif direction_bool = 'n' then
+        open result_cursor for
+            SELECT sub.*
+            FROM   (SELECT sub2.*, rownum AS rnum
+                    FROM   (
+                        select *
+                        from lib_books
+                        order by order_column desc
+                    ) sub2
+                    WHERE rownum <= end_number) sub
+            WHERE  rnum > start_number;
+    end if;
+END proc_lib_pagination;
+
+-- ?
