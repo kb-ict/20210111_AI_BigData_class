@@ -148,3 +148,226 @@ function Quiz02() {
     let ss = (input % 3600) % 60;
     return `${hh}시간 ${mm}분 ${ss}초`;
 }
+
+function _20210331_01() {
+    //
+    const todos = ['우유 구매', '업무', '필라테스'];
+    console.log(todos.length);
+    todos.push('공부하기');
+    console.log(todos.length);
+    todos.push('연습하기');
+    console.log(todos.length);
+    console.log(todos);
+}
+
+function _20210331_02() {
+    //
+    const fruits = ['사과', '배', '바나나'];
+    fruits[10] = '귤';
+    console.log(fruits);
+}
+
+function _20210331_03() {
+    //
+    const itemB = ['사과', '배', '바나나'];
+    const index = itemB.indexOf('바나나');
+    console.log(itemB);
+    itemB.splice(index, 1);
+    console.log(itemB);
+}
+
+function _20210331_04() {
+    //
+    const 자리 = ['이재문', '신용원', '박상준', '도현우'];
+    console.log(자리);
+    자리.splice(2, 0, '이기정');
+    console.log(자리);
+}
+
+function printAsterisk01() {
+    //
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < i; j++) {
+            str += '*';
+        }
+        for (let j = 10; j > i; j--) {
+            str += ' ';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function printAsterisk02() {
+    //
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 10; j > i; j--) {
+            str += ' ';
+        }
+        for (let j = 0; j < i; j++) {
+            str += '*';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function printAsterisk03() {
+    //
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < i; j++) {
+            str += ' ';
+        }
+        for (let j = 10; j > i; j--) {
+            str += '*';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function printAsterisk04() {
+    //
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 10; j > i; j--) {
+            str += '*';
+        }
+        for (let j = 0; j < i; j++) {
+            str += ' ';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function printAsteriskPyramid() {
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 10; j > i; j--) {
+            str += ' ';
+        }
+        for (let j = 0; j < i; j++) {
+            str += '**';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function printAsteriskReverseTriangle() {
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < i; j++) {
+            str += ' ';
+        }
+        for (let j = 10; j > i; j--) {
+            str += '**';
+        }
+        for (let j = 0; j < i; j++) {
+            str += ' ';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function printAsteriskDiamond() {
+    let str = '';
+    for (let i = 0; i < 10; i++) {
+        for (let j = 10; j > i; j--) {
+            str += ' ';
+        }
+        for (let j = 0; j < i; j++) {
+            str += '**';
+        }
+        str += '\n';
+    }
+    for (let i = 0; i < 10; i++) {
+        for (let j = 0; j < i; j++) {
+            str += ' ';
+        }
+        for (let j = 10; j > i; j--) {
+            str += '**';
+        }
+        for (let j = 0; j < i; j++) {
+            str += ' ';
+        }
+        str += '\n';
+    }
+    console.log(str);
+}
+function _20210331_quiz01() {
+    //5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 출력하는 프로그램을 작성하시오.
+    let numbers = [];
+    for (let i = 0; i < 5; i++) {
+        numbers[i] = prompt('[' + (i + 1) + ']번째 숫자 입력', 5 * (i + 1));
+    }
+    let max = 0;
+    let min = 0;
+    console.log(numbers);
+    for (let i = 0; i < numbers.length; i++) {
+        max = (Number(numbers[i]) > Number(max)) ? numbers[i] : max;
+        min = (Number(numbers[i]) < Number(min)) ? numbers[i] : min;
+    }
+    console.log('max = ' + max + '\nmin = ' + min);
+}
+function _20210331_quiz02(k) {
+    //아래의 규칙을 따르는 수열의 20번째 숫자를 프로그램을 만들어 찾으시오.
+    /*
+    1, 11, 12, 1121, 122111, 112213
+    첫 번째 수열 : 1
+    두 번째 수열 : 1이 1개 = 11
+    세 번째 수열 : 1이 2개 = 12
+    네 번째 수열 1이 1개, 2가 1개 = 1121
+    다섯 번째 수열 : 1이 2개, 2가 1개, 1이 1개 = 122111
+    여섯 번째 수열 : 1이 1개, 2가 2개 1이 3개 = 112213 */
+
+    let seq = ['1'];// 시작
+    let cnt = 0;
+    let temp;
+    let pushedStr = '';
+    for (let i = 0; i < k - 1; i++) {
+        // k회 반복
+        temp = String(seq[i])[0];
+        for (let pointer = 0; pointer < String(seq[i]).length; pointer++) {
+            if (pointer != 0 && temp == String(seq[i])[pointer])
+                continue;
+            temp = String(seq[i])[pointer];
+            for (let j = pointer; j < seq[i]; j++) {
+                if (temp == seq[i][j])
+                    cnt++;
+                else
+                    break;
+            }
+            pushedStr += String(temp) + String(cnt);
+            cnt = 0;
+        }
+        seq.push(pushedStr);
+        pushedStr = '';
+    }
+    console.log(seq);
+    console.log(seq[k - 1]);
+}
+
+function _20210331_quiz03() {
+    // 별찍기
+    // 첫번째줄 별.공백 순
+    // 두번째줄 공백.별 순
+    let k = prompt('숫자 입력', 5);
+    let str = '';
+    for (let i = 0; i < k; i++) {
+        for (let j = 0; j < k; j++) {
+            if (j % 2 == 0)
+                str += '*';
+            else
+                str += ' ';
+        }
+        str += '\n';
+        for (let j = 0; j < k; j++) {
+            if (j % 2 == 0)
+                str += ' ';
+            else
+                str += '*';
+        }
+        str += '\n\n';// 구분이 쉽게 crlf 하나 더 넣음
+    }
+    console.log(str);
+}
