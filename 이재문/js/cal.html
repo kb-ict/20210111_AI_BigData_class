@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="text" id="one1">+
+    <input type="text" id="two1">
+    <span id='result1'> = </span>
+    <button onclick="_20210401_cal_sum()">계산</button>
+    <br>
+    <input type="text" id="one2">-
+    <input type="text" id="two2">
+    <span id='result2'> = </span>
+    <button onclick="_20210401_cal_sub()">계산</button>
+    <br>
+    <input type="text" id="one3">X
+    <input type="text" id="two3">
+    <span id='result3'> = </span>
+    <button onclick="_20210401_cal_mul()">계산</button>
+    <br>
+    <input type="text" id="one4">/
+    <input type="text" id="two4">
+    <span id='result4'> = </span>
+    <button onclick="_20210401_cal_div()">계산</button>
+    <br>
+    <script>
+        function _20210401_cal_sum() {
+            let one = document.getElementById('one1').value;
+            let two = document.getElementById('two1').value;
+            let result = Number(one) + Number(two);
+            // alert(result);
+            document.getElementById('result1').innerText = ' = ' + result;
+        }
+        function _20210401_cal_sub() {
+            let one = document.getElementById('one2').value;
+            let two = document.getElementById('two2').value;
+            let result = Number(one) - Number(two);
+            // alert(result);
+            document.getElementById('result2').innerText = ' = ' + result;
+        }
+        function _20210401_cal_mul() {
+            let one = document.getElementById('one3').value;
+            let two = document.getElementById('two3').value;
+            let result = Number(one) * Number(two);
+            // alert(result);
+            document.getElementById('result3').innerText = ' = ' + result;
+        }
+        function _20210401_cal_div() {
+            let one = document.getElementById('one4').value;
+            let two = document.getElementById('two4').value;
+            let result = Number(one) / Number(two);
+            // alert(result);
+            document.getElementById('result4').innerText = ' = ' + result;
+        }
+        window.onload = function () {
+            //
+        }
+    </script>
+</body>
+
+</html>

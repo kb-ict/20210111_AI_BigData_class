@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="text" id="one">
+    <input type="text" id="two">
+    <span id="result">= ?</span>
+    <br>
+    <input type="button" onclick="_20210401_cal('+')" value="더하기">
+    <input type="button" onclick="_20210401_cal('-')" value="빼기">
+    <input type="button" onclick="_20210401_cal('*')" value="곱하기">
+    <input type="button" onclick="_20210401_cal('/')" value="나누기">
+    <br>
+    <script>
+        function _20210401_cal(operand) {
+            let one = document.getElementById('one').value;
+            let two = document.getElementById('two').value;
+            let result;
+            switch (operand) {
+                case '+':
+                    result = Number(one) + Number(two);
+                    break;
+                case '-':
+                    result = Number(one) - Number(two);
+                    break;
+                case '*':
+                    result = Number(one) * Number(two);
+                    break;
+                case '/':
+                    result = Number(one) / Number(two);
+                    break;
+            }
+            // alert(result);
+            document.getElementById('result').innerText = ' = ' + result;
+        }
+
+        function min(array) {
+            let output = array[0];
+            for (const item of array) {
+                if (output > item)
+                    output = item;
+            }
+            return output;
+        }
+        function max(array) {
+            let output = array[0];
+            for (const item of array) {
+                if (output < item)
+                    output = item;
+            }
+            return output;
+        }
+
+        window.onload = function () {
+            //
+        }
+    </script>
+</body>
+
+</html>

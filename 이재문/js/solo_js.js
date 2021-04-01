@@ -132,7 +132,7 @@ function ForLoop() {
 }
 function Quiz01() {
     // 1부터 100까지의 양의 정수 중 3의 배수만 더한 값 출력
-    let sum = 0;
+    let result = 0;
     for (var i = 1; i <= 100; i++) {
         if (i % 3 == 0)
             sum += (i);
@@ -298,7 +298,8 @@ function _20210331_quiz01() {
     //5개의 숫자를 입력받은 뒤 가장 작은 수와 가장 큰 수를 출력하는 프로그램을 작성하시오.
     let numbers = [];
     for (let i = 0; i < 5; i++) {
-        numbers[i] = prompt('[' + (i + 1) + ']번째 숫자 입력', 5 * (i + 1));
+        // numbers[i] = prompt('[' + (i + 1) + ']번째 숫자 입력', 5 * (i + 1));
+        numbers[i] = 5 * (i + 1);
     }
     let max = 0;
     let min = 0;
@@ -325,14 +326,13 @@ function _20210331_quiz02(k) {
     let temp;
     let pushedStr = '';
     for (let i = 0; i < k - 1; i++) {
-        // k회 반복
-        temp = String(seq[i])[0];
+        // (k-1)회 반복
         for (let pointer = 0; pointer < String(seq[i]).length; pointer++) {
             if (pointer != 0 && temp == String(seq[i])[pointer])
                 continue;
             temp = String(seq[i])[pointer];
-            for (let j = pointer; j < seq[i]; j++) {
-                if (temp == seq[i][j])
+            for (let j = pointer; j < String(seq[i]).length; j++) {
+                if (temp == String(seq[i])[j])
                     cnt++;
                 else
                     break;
@@ -347,11 +347,12 @@ function _20210331_quiz02(k) {
     console.log(seq[k - 1]);
 }
 
-function _20210331_quiz03() {
+function _20210331_quiz03(num) {
     // 별찍기
     // 첫번째줄 별.공백 순
     // 두번째줄 공백.별 순
-    let k = prompt('숫자 입력', 5);
+    // let k = prompt('숫자 입력', 5);
+    let k = num;
     let str = '';
     for (let i = 0; i < k; i++) {
         for (let j = 0; j < k; j++) {
