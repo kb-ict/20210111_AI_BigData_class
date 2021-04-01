@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class EngMain {
+	public EngMain(){
+		Scanner scan = new Scanner(System.in);
+		ManagerEng me = new ManagerEng();
+		while(true){
+			System.out.println("Option : 1.문장추가 2.문장수정 3.문장삭제 4.조회");
+			int select = scan.nextInt();
+		}
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}

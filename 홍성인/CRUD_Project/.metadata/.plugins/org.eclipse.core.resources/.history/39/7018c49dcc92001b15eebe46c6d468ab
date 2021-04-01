@@ -1,0 +1,25 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class ManagerEng {
+	Scanner scan = new Scanner(System.in);
+	Connection conn = null;					// <-- check
+	PreparedStatement pstmt = null;			// <-- check
+	
+	public void insertEng(){
+		System.out.println("입력가능");
+	}
+	
+	public void updateEng(){
+		System.out.println("수정가능");
+	}
+	
+	public void deleteEng(){
+		System.out.println("삭제가능");
+	}
+	
+	public void selectEng(){
+		System.out.println("조회가능");
+	}
+}
