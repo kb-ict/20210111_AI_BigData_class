@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Hamburger {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int menu, input, output = 0; 
+		int coffee = 200;
+		int cocoa = 250;
+		boolean run = true;
+		
+		System.out.println("요금을 투입하세요 >>>");
+		input = sc.nextInt();
+		
+		while(run){
+			System.out.println("====================커피 자판기====================");
+			System.out.println("1.커피(200)\t 2.코코아(250)\t 3.반환\t 4.종료");
+			System.out.println("메뉴를 선택하세요 >>>");
+			menu = sc.nextInt();
+			
+			if(menu==1){
+				output = input - coffee;
+				System.out.println("맛있게 드세요.");
+				if(coffee>output){
+					System.out.println("요금이 부족합니다");
+				}
+			}
+			
+		}
+		
+	}
+}

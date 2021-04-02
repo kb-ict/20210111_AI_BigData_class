@@ -1,0 +1,10 @@
+
+public class Hamburger {
+	public Hamburger(){
+		
+	}
+	public static void main(String[] args){
+		new Hamburger();
+		System.out.println("hello java");
+	}
+}
