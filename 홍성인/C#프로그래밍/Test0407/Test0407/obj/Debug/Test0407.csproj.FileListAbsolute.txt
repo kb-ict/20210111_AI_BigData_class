@@ -1,0 +1,7 @@
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\bin\Debug\Test0407.exe.config
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\bin\Debug\Test0407.exe
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\bin\Debug\Test0407.pdb
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\obj\Debug\Test0407.csprojAssemblyReference.cache
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\obj\Debug\Test0407.csproj.CoreCompileInputs.cache
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\obj\Debug\Test0407.exe
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\Test0407\Test0407\obj\Debug\Test0407.pdb
