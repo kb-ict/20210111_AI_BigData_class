@@ -4,3 +4,4 @@ D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\ClassTest1\ClassTest1\b
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\ClassTest1\ClassTest1\obj\Debug\ClassTest1.csproj.CoreCompileInputs.cache
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\ClassTest1\ClassTest1\obj\Debug\ClassTest1.exe
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\ClassTest1\ClassTest1\obj\Debug\ClassTest1.pdb
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\ClassTest1\ClassTest1\obj\Debug\ClassTest1.csprojAssemblyReference.cache

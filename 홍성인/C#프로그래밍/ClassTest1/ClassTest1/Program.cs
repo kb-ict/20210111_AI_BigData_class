@@ -10,7 +10,6 @@ namespace ClassTest1
     {
         static void Main(string[] args)
         {
-
             const int MAIN_MENU_INSERT = 1;
             const int MAIN_MENU_VIEW = 2;
             const int MAIN_MENU_EXIT = 3;
@@ -37,8 +36,8 @@ namespace ClassTest1
             Random r = new Random();
 
             string[] name = { "홍길동", "김길동", "박길동", "최길동", "이길동" };
-            int[] age = {30,40,50,60,100};
-            char[] gender = { '남','여' };
+            int[] age = { 30, 40, 50, 60, 100 };
+            char[] gender = { '남', '여' };
             string[] tel = { "010-1111-1111", "010-2222-2222", "010-3333-3333", "010-4444-4444", "010-5555-5555" };
             string[] addr = { "서울", "대전", "대구", "부산", "제주도" };
 
@@ -64,7 +63,10 @@ namespace ClassTest1
                         createRandData(st, name, age, gender, tel, addr, r);
                         break;
                     case MAIN_MENU_VIEW:
-                        dataView(st);
+                        if(st != null)
+                        {
+                            dataView2(st);
+                        }
                         break;
                     case MAIN_MENU_EXIT:
                         Environment.Exit(0);
@@ -73,44 +75,58 @@ namespace ClassTest1
                 }
 
             }
-            
+
         }
-
-
-        
 
         public static int menuMain()
         {
             Console.WriteLine("=======================");
             Console.WriteLine("학생 관리 프로그램 v1.0");
             Console.WriteLine("=======================");
-            Console.WriteLine("1.학생정보 생성");
+            Console.WriteLine("1.랜덤 데이터 생성");
             Console.WriteLine("2.학생정보 출력");
-            Console.WriteLine("3.종료");
+            Console.WriteLine("3.학생정보 추가");
+            Console.WriteLine("4.학생정보 수정");
+            Console.WriteLine("5.학생정보 삭제");
+            Console.WriteLine("6.종료");
             Console.WriteLine("=======================");
             Console.WriteLine("메뉴 선택: ");
-            int menu =Convert.ToInt32(Console.ReadLine());
+            int menu = Convert.ToInt32(Console.ReadLine());
             return menu;
         }
 
-
-
-
-
-        public static void createRandData(Student[] st,string[] name, int[] age, char[] gender, string[] tel, string[] addr, Random r)
+        public static void createRandData(Student[] st, string[] name, int[] age, char[] gender, string[] tel, string[] addr, Random r)
         {
-            for(int i =0;i<st.Length;i++)
+            for (int i = 0; i < st.Length; i++)
             {
                 st[i] = new Student(name[r.Next(5)], age[r.Next(5)], gender[r.Next(2)], tel[r.Next(5)], addr[r.Next(5)]);
             }
+            Console.WriteLine("정상적으로 데이터가 생성되었습니다");
         }
+
         public static void dataView(Student[] s)
         {
-            for (int i=0;i<s.Length;i++)
+            try
+            {
+                for (int i = 0; i < s.Length; i++)
+                {
+                    s[i].studentinfo();
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("생성된 데이터가 없습니다");
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public static void dataView2(Student[] s)
+        {
+            for (int i = 0; i < s.Length; i++)
             {
                 s[i].studentinfo();
             }
-            
+
         }
 
     }

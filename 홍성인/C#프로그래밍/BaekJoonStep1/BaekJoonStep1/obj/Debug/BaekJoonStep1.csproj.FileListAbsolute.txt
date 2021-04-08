@@ -1,0 +1,7 @@
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\bin\Debug\BaekJoonStep1.exe.config
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\bin\Debug\BaekJoonStep1.exe
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\bin\Debug\BaekJoonStep1.pdb
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.csprojAssemblyReference.cache
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.csproj.CoreCompileInputs.cache
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.exe
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.pdb
