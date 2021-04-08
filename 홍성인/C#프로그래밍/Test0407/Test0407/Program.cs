@@ -12,13 +12,16 @@ namespace Test0407
         static void Main(string[] args)
         {
             // 1차원 배열 초기화
-            int[] arrlnt = { 10, 20, 30, 40 };
+            int[] arrlnt = { 10, 20, 30, 40,50 };
             for (int i=0; i<arrlnt.Length; i++)
             {
-                Console.Write(arrlnt[i] + " ");
+                //Console.Write(arrlnt[i] + " ");
                 string str = string.Format("배열[{0}]:{1}", i, arrlnt[i]);
+                //string str1 = $"배열[{i}]:{arrlnt[i]}";
                 Console.WriteLine(str);
+                //Console.WriteLine(str1);
             }
+            Console.WriteLine();
 
             // 1차원 배열 초기화2
             char[] arrCh = new char[4]
@@ -178,6 +181,11 @@ namespace Test0407
                 Console.WriteLine(val);
             }
             Console.WriteLine("값:{0}", dic["key2"]);
+            Console.WriteLine();
+
+            Decimal pricePerOunce = 17.36m;
+            string s = string.Format("The current price is {0} per ounce.",pricePerOunce);
+            Console.WriteLine(s);
 
         }
     }
