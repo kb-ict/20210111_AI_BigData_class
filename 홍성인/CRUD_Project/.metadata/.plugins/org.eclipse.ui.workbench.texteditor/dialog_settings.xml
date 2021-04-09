@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="C:\\Users\\donqu\\OneDrive\\바탕 화면\\icon insert" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="C:\\Users\\KB\\Desktop\\icon insert\\01 11 NBB \uC624\uB9AC\uC9C0\uB110.JPG"/>
+			<item value="C:\\Users\\KB\\Desktop\\icon insert\\00 10 NBB \uC2DC\uADF8\uB2C8\uCC98.JPG"/>
+			<item value="C:\\Users\\KB\\Desktop\\icon insert\\sub.JPG"/>
+			<item value="C:\\Users\\KB\\Desktop\\icon insert\\add.JPG"/>
+			<item value="C:\\Users\\KB\\Desktop\\icon insert\\02 12 NBB \uC5B4\uBA54\uC774\uC9D5.JPG"/>
+		</list>
+		<list key="replacehistory">
+			<item value="C:\\Users\\donqu\\OneDrive\\바탕 화면\\icon insert"/>
+			<item value="C:\\Users\donqu\\OneDrive\\바탕 화면\\icon insert"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="309" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="388" key="DIALOG_X_ORIGIN"/>
+		<item value="147" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

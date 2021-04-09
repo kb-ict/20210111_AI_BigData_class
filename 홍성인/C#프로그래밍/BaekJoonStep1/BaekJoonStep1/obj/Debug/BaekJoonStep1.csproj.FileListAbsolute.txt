@@ -5,3 +5,10 @@ D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonS
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.csproj.CoreCompileInputs.cache
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.exe
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.pdb
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\bin\Debug\BaekJoonStep1.exe.config
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\bin\Debug\BaekJoonStep1.exe
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\bin\Debug\BaekJoonStep1.pdb
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.csprojAssemblyReference.cache
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.csproj.CoreCompileInputs.cache
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.exe
+C:\Users\donqu\OneDrive\문서\GitHub\20210111_AI_BigData_class\홍성인\C#프로그래밍\BaekJoonStep1\BaekJoonStep1\obj\Debug\BaekJoonStep1.pdb
