@@ -1,0 +1,160 @@
+package Test;
+
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+
+public class APanel extends JPanel {
+	int count = 0;
+	String menu;
+	int price;
+	private JTextField Bul_Field;
+	private JTextField textField_1;
+	
+	public APanel() {
+		setBackground(new Color(255, 215, 0));
+		setLayout(null);
+		
+		
+		
+		// @@@@@@@@@@@@@@@@@@@@ NBB 시그니처
+		JButton bul = new JButton("NBB 시그니처");
+		bul.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Main.mount[0] = 0;
+				Main.menu[0] = "NBB 시그니처";
+				Main.price[0] = 3500;
+			}
+		});
+		bul.setBounds(15, 10, 128, 90);
+		add(bul);
+		setSize(900, 380);
+		//- 버튼
+		JButton bul_minus = new JButton("-");
+		bul_minus.setFont(new Font("Adobe Song Std L", Font.PLAIN, 14));
+		bul_minus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(Main.mount[0] > 0){
+					Main.mount[0] = Main.mount[0] -1;
+					getTextField().setText(Main.mount[0]+"");
+					System.out.println(Main.mount[0]);
+					bul_minus.setEnabled(true);
+				}
+				if(Main.mount[0] < 0){
+					bul_minus.setEnabled(false);
+				}
+			}
+		});
+		bul_minus.setBounds(15, 124, 41, 23);
+		add(bul_minus);
+		// + 버튼
+		JButton bul_plus = new JButton("+");
+		bul_plus.setFont(new Font("굵은안상수체", Font.PLAIN, 14));
+		bul_plus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Main.mount[0] = Main.mount[0] + 1;
+				getTextField().setText(Main.mount[0]+"");
+			}
+		});
+		bul_plus.setBounds(102, 124, 41, 23);
+		add(bul_plus);
+		
+		
+		setTextField(new JTextField());
+		getTextField().setText(""+Main.mount[0]);
+		getTextField().setBounds(58, 123, 41, 23);
+		add(getTextField());
+		getTextField().setColumns(10);
+		
+		JButton btnNbb_1 = new JButton("NBB \uC5B4\uBA54\uC774\uC9D5");
+		btnNbb_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNbb_1.setBounds(299, 10, 128, 90);
+		add(btnNbb_1);
+		
+		JButton bul_2 = new JButton("\uBBF8\uD2B8\uB9C8\uB2C8\uC544");
+		bul_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		bul_2.setBounds(441, 10, 128, 90);
+		add(bul_2);
+		
+		JButton btnNbb = new JButton("NBB \uC624\uB9AC\uC9C0\uB110");
+		btnNbb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNbb.setBounds(157, 10, 128, 90);
+		add(btnNbb);
+		
+		JButton bul_4 = new JButton("\uBA54\uAC00\uBC14\uC774\uD2B8");
+		bul_4.setBounds(583, 10, 128, 90);
+		add(bul_4);
+		
+		JButton bul_5 = new JButton("\uC0B0\uCCB4\uC2A4");
+		bul_5.setBounds(725, 10, 128, 90);
+		add(bul_5);
+		
+		JButton bul_1 = new JButton("\uC2A4\uBAA8\uD0A4\uC0B4\uC0AC");
+		bul_1.setBounds(15, 211, 128, 90);
+		add(bul_1);
+		
+		JButton bul_3 = new JButton("\uB370\uB9AC\uB9C8\uC694");
+		bul_3.setBounds(157, 211, 128, 90);
+		add(bul_3);
+		
+		JButton bul_6 = new JButton("\uADF8\uB9B4\uB4DC\uB9C8\uC694");
+		bul_6.setBounds(299, 211, 128, 90);
+		add(bul_6);
+		
+		JButton bul_7 = new JButton("\uCF54\uC6B0\uC2AC\uB85C\uCE58\uD0A8");
+		bul_7.setBounds(441, 211, 128, 90);
+		add(bul_7);
+		
+		JButton bul_8 = new JButton("\uC2A4\uB9AC\uB77C\uCC28\uCE58\uD0A8");
+		bul_8.setBounds(583, 211, 128, 90);
+		add(bul_8);
+		
+		JButton bul_minus_1 = new JButton("-");
+		bul_minus_1.setFont(new Font("Dialog", Font.PLAIN, 14));
+		bul_minus_1.setBounds(157, 122, 41, 23);
+		add(bul_minus_1);
+		
+		textField_1 = new JTextField();
+		textField_1.setText("0");
+		textField_1.setColumns(10);
+		textField_1.setBounds(200, 123, 41, 23);
+		add(textField_1);
+		
+		JButton bul_plus_1 = new JButton("+");
+		bul_plus_1.setFont(new Font("Dialog", Font.PLAIN, 14));
+		bul_plus_1.setBounds(244, 122, 41, 23);
+		add(bul_plus_1);
+		
+		
+		
+	}
+	//@@@@@ NBB 시그니처
+	public JTextField getTextField() {
+		return Bul_Field;
+	}
+	public void setTextField(JTextField textField) {
+		this.Bul_Field = textField;
+	}
+	//@@@@@ NBB 오리지널
+	public JTextField getTextField1() {
+		return Chi_Field;
+	}
+	public void setTextField2(JTextField txtddffgg) {
+		this.Chi_Field = txtddffgg;
+	}
+}
