@@ -1,9 +1,0 @@
-
-public class Hambuger {
-	public Hamburger(){
-		
-	}
-	public static void main(String[] args){
-		new Hambuger();
-	}
-}
