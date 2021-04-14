@@ -1,4 +1,5 @@
-﻿using ClassTest2.Model;
+﻿using ClassTest2.Common;
+using ClassTest2.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,70 +27,105 @@ namespace ClassTest2.View
         #endregion
         public int mainMenu()
         {
-            Console.WriteLine("====================");
-            Console.WriteLine("고객차량관리 앱 v1.0");
-            Console.WriteLine("====================");
-            Console.WriteLine("1.랜덤데이터 생성");
-            Console.WriteLine("2.모든 데이터 삭제");
-            Console.WriteLine("3.데이터 보기");
-            Console.WriteLine("4.데이터 추가");
-            Console.WriteLine("5.데이터 삭제");
-            Console.WriteLine("6.데이터 수정");
-            Console.WriteLine("7.앱 종료");
-            Console.WriteLine("====================");
-            Console.Write("Main 메뉴 선택: ");
-            return Convert.ToInt32(Console.ReadLine());
+            int menu = 0;
+            try
+            {
+                Console.WriteLine("====================");
+                Console.WriteLine("고객차량관리 앱 v1.0");
+                Console.WriteLine("====================");
+                Console.WriteLine("1.랜덤데이터 생성");
+                Console.WriteLine("2.모든 데이터 삭제");
+                Console.WriteLine("3.데이터 보기");
+                Console.WriteLine("4.데이터 추가");
+                Console.WriteLine("5.데이터 삭제");
+                Console.WriteLine("6.데이터 수정");
+                Console.WriteLine("7.앱 종료");
+                Console.WriteLine("====================");
+                Console.Write("Main 메뉴 선택: ");
+                menu = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException e)
+            {
+                CommMenu.errMsg("mainMenu", e.Message);
+            }
+            return menu;
         }
 
         public int getRandSize()
         {
-            Console.WriteLine("====================");
-            Console.WriteLine("랜덤 데이터 개수 설정");
-            Console.WriteLine("====================");
-            Console.WriteLine("개수 입력: ");
-            return Convert.ToInt32(Console.ReadLine());
+            int size = 0;
+            try
+            {
+                Console.WriteLine("====================");
+                Console.WriteLine("랜덤 데이터 개수 설정");
+                Console.WriteLine("====================");
+                Console.WriteLine("개수 입력: ");
+                return Convert.ToInt32(Console.ReadLine());
+            }
+            catch (FormatException e)
+            {
+                CommMenu.errMsg("getRandSize", e.Message);
+            }
+            return size;
+
         }
 
         public string[] addCarMenu()
         {
 
             string[] data = new string[4];
-            Console.WriteLine("====================");
-            Console.WriteLine("Car 데이터 추가");
-            Console.WriteLine("====================");
-            Console.Write("1.차종 : ");
-            data[0] = Console.ReadLine();
-            Console.Write("2.색상 : ");
-            data[1] = Console.ReadLine();
-            Console.Write("3.제조사 : ");
-            data[2] = Console.ReadLine();
-            Console.Write("4.가격 : ");
-            data[3] = Console.ReadLine();
+            try 
+            {
+                Console.WriteLine("====================");
+                Console.WriteLine("차량 데이터 추가");
+                Console.WriteLine("====================");
+                Console.Write("1.차종 : ");
+                data[0] = Console.ReadLine();
+                Console.Write("2.색상 : ");
+                data[1] = Console.ReadLine();
+                Console.Write("3.제조사 : ");
+                data[2] = Console.ReadLine();
+                Console.Write("4.가격 : ");
+                data[3] = Console.ReadLine();   
+            }
+            catch (FormatException e)
+            {
+                CommMenu.errMsg("addCarMenu", e.Message);
+            }
             return data;
+
         }
 
         public Car addCarMenu2()
         {
-          
-            Console.WriteLine("====================");
-            Console.WriteLine("Car 데이터 추가");
-            Console.WriteLine("====================");
-            Console.Write("1.차종 : ");
-            string model = Console.ReadLine();
-            Console.Write("2.색상 : ");
-            string color = Console.ReadLine();
-            Console.Write("3.제조사 : ");
-            string company = Console.ReadLine();
-            Console.Write("4.가격 : ");
-            string price = Console.ReadLine();
-            return new Car(model,color,company,price);
+            Car car = null;
+            try 
+            {
+                Console.WriteLine("====================");
+                Console.WriteLine("차량 데이터 추가");
+                Console.WriteLine("====================");
+                Console.Write("1.차종 : ");
+                string model = Console.ReadLine();
+                Console.Write("2.색상 : ");
+                string color = Console.ReadLine();
+                Console.Write("3.제조사 : ");
+                string company = Console.ReadLine();
+                Console.Write("4.가격 : ");
+                string price = Console.ReadLine();
+                car = new Car(model, color, company, price);
+            }
+            catch (FormatException e)
+            {
+                CommMenu.errMsg("addCarMenu2", e.Message);
+            }
+            return car;
         }
 
         public string delCarMenu()
         {
           
             Console.WriteLine("====================");
-            Console.WriteLine("Car 데이터 삭제");
+            Console.WriteLine("차량 데이터 삭제");
             Console.WriteLine("====================");
             Console.Write("삭제할 차량 모델 입력 : ");
             return Console.ReadLine();
@@ -99,7 +135,7 @@ namespace ClassTest2.View
         {
             string[] model = new string[2];
             Console.WriteLine("====================");
-            Console.WriteLine("car 데이터 수정");
+            Console.WriteLine("차량 데이터 수정");
             Console.WriteLine("====================");
             Console.Write("검색할 차량 모델 입력 : ");
             model[0] = Console.ReadLine();

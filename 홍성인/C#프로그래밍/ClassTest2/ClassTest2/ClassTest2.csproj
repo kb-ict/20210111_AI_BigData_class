@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CommMenu.cs" />
     <Compile Include="Control\CarController.cs" />
     <Compile Include="Control\CustController.cs" />
     <Compile Include="Control\SellController.cs" />
+    <Compile Include="Control\UnionController.cs" />
     <Compile Include="Main\Program.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Deal.cs" />
     <Compile Include="Model\Seller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\RandData.cs" />
@@ -57,8 +60,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
