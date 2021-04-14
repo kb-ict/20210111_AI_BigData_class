@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassTest2.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ClassTest2.View
 {
     class Menu
     {
+        #region 1.메뉴 상수 정의
         public const int MENU_MAIN_RAND = 1;
         public const int MENU_MAIN_DEL_ALL = 2;
         public const int MENU_MAIN_VIEW = 3;
@@ -16,6 +18,12 @@ namespace ClassTest2.View
         public const int MENU_MAIN_UPDATE = 6;
         public const int MENU_MAIN_EXIT = 7;
 
+        public const int MENU_SUB_ADD_CAR = 1;
+        public const int MENU_SUB_ADD_CUST = 2;
+        public const int MENU_SUB_ADD_SELL = 3;
+        public const int MENU_SUB_ADD_EXIT = 4;
+
+        #endregion
         public int mainMenu()
         {
             Console.WriteLine("====================");
@@ -91,13 +99,143 @@ namespace ClassTest2.View
         {
             string[] model = new string[2];
             Console.WriteLine("====================");
-            Console.WriteLine("Car 데이터 수정");
+            Console.WriteLine("car 데이터 수정");
             Console.WriteLine("====================");
             Console.Write("검색할 차량 모델 입력 : ");
             model[0] = Console.ReadLine();
             Console.Write("변경할 차량 모델 입력 : ");
             model[1] = Console.ReadLine();
             return model;
+        }
+
+        //========================================================================
+
+        public Customer addCustMenu2()
+        {
+
+            Console.WriteLine("====================");
+            Console.WriteLine("고객 데이터 추가");
+            Console.WriteLine("====================");
+            Console.Write("1.이름 : ");
+            string name = Console.ReadLine();
+            Console.Write("2.나이 : ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("3.전화 : ");
+            string tel = Console.ReadLine();
+            Console.Write("4.주소 : ");
+            string addr = Console.ReadLine();
+            Console.Write("5.성별 : ");
+            char gender =Convert.ToChar(Console.ReadLine());
+            return new Customer(name, age, tel, addr, gender);
+        }
+
+        public string delCustMenu()
+        {
+
+            Console.WriteLine("====================");
+            Console.WriteLine("고객 데이터 삭제");
+            Console.WriteLine("====================");
+            Console.Write("삭제할 고객 이름 입력 : ");
+            return Console.ReadLine();
+        }
+
+        public string[] updateCustMenu()
+        {
+            string[] name = new string[2];
+            Console.WriteLine("====================");
+            Console.WriteLine("고객 데이터 수정");
+            Console.WriteLine("====================");
+            Console.Write("검색할 고객 이름 입력 : ");
+            name[0] = Console.ReadLine();
+            Console.Write("변경할 고객 이름 입력 : ");
+            name[1] = Console.ReadLine();
+            return name;
+        }
+
+        //======================================================================
+
+        public Seller addSellMenu2()
+        {
+
+            Console.WriteLine("====================");
+            Console.WriteLine("판매자 데이터 추가");
+            Console.WriteLine("====================");
+            Console.Write("1.이름 : ");
+            string name = Console.ReadLine();
+            Console.Write("2.전화 : ");
+            string tel = Console.ReadLine();
+            Console.Write("3.직급 : ");
+            string status = Console.ReadLine();
+            Console.Write("4.사무실 : ");
+            string office = Console.ReadLine();
+            return new Seller(name, tel, status, office);
+        }
+
+        public string delSellMenu()
+        {
+
+            Console.WriteLine("====================");
+            Console.WriteLine("판매자 데이터 삭제");
+            Console.WriteLine("====================");
+            Console.Write("삭제할 판매자 이름 입력 : ");
+            return Console.ReadLine();
+        }
+
+        public string[] updateSellMenu()
+        {
+            string[] name = new string[2];
+            Console.WriteLine("====================");
+            Console.WriteLine("판매자 데이터 수정");
+            Console.WriteLine("====================");
+            Console.Write("검색할 판매자 이름 입력 : ");
+            name[0] = Console.ReadLine();
+            Console.Write("변경할 판매자 이름 입력 : ");
+            name[1] = Console.ReadLine();
+            return name;
+        }
+
+        //=====================================================
+
+        public int subAddMenu()
+        {
+            Console.WriteLine("====================");
+            Console.WriteLine("데이터 추가 선택");
+            Console.WriteLine("====================");
+            Console.WriteLine("1.차량 정보 추가");
+            Console.WriteLine("2.고객 정보 추가");
+            Console.WriteLine("3.판매자 정보 추가");
+            Console.WriteLine("4.종료");
+            Console.WriteLine("=====================");
+            Console.Write("메뉴 선택: ");
+            return Convert.ToInt32(Console.ReadLine());   
+        }
+
+        public int subDelMenu()
+        {
+            Console.WriteLine("====================");
+            Console.WriteLine("데이터 삭제 선택");
+            Console.WriteLine("====================");
+            Console.WriteLine("1.차량 정보 삭제");
+            Console.WriteLine("2.고객 정보 삭제");
+            Console.WriteLine("3.판매자 정보 삭제");
+            Console.WriteLine("4.종료");
+            Console.WriteLine("=====================");
+            Console.Write("삭제 메뉴 선택: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        public int subUpdateMenu()
+        {
+            Console.WriteLine("====================");
+            Console.WriteLine("데이터 수정 선택");
+            Console.WriteLine("====================");
+            Console.WriteLine("1.차량 정보 수정");
+            Console.WriteLine("2.고객 정보 수정");
+            Console.WriteLine("3.판매자 정보 수정");
+            Console.WriteLine("4.종료");
+            Console.WriteLine("=====================");
+            Console.Write("메뉴 선택: ");
+            return Convert.ToInt32(Console.ReadLine());
         }
     }
 }

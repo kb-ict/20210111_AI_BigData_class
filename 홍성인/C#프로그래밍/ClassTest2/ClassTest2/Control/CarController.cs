@@ -71,7 +71,7 @@ namespace ClassTest2.Control
             {
                 if (listCar[i].Model.Equals(model))
                 {
-                    listCar.RemoveAt(i);
+                    listCar.RemoveAt(i--);                           // <------ i를 i--로 수정 ( 삭제 부분 버그 )
                 }
             }
         }

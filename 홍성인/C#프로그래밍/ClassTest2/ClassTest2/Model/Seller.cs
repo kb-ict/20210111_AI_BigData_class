@@ -37,9 +37,9 @@ namespace ClassTest2.Model
         public override string ToString()
         {
             string data = "이름: " + name + "\n";
-            data += "전화" + tel + "\n";
-            data += "직급" + status + "\n";
-            data += "사무실" + office + "\n";
+            data += "전화: " + tel + "\n";
+            data += "직급: " + status + "\n";
+            data += "사무실: " + office + "\n";
             return data;
         }
     }

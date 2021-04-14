@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ClassTest2",
     "\\ClassTest2\\Control",
     "\\ClassTest2\\Main",
     "\\ClassTest2\\Model",
     "\\ClassTest2\\Util",
     "\\ClassTest2\\View"
   ],
-  "SelectedNode": "\\ClassTest2\\Main\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

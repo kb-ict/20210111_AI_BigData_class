@@ -41,10 +41,10 @@ namespace ClassTest2.Model
         public override string ToString()
         {
             string data = "이름: " + name + "\n";
-            data += "나이" + age + "\n";
-            data += "성별" + gender + "\n";
-            data += "전화" + tel + "\n";
-            data += "주소" + address + "\n";
+            data += "나이: " + age + "\n";
+            data += "성별: " + gender + "\n";
+            data += "전화: " + tel + "\n";
+            data += "주소: " + address + "\n";
             return data;
         }
     }
