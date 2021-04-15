@@ -62,7 +62,7 @@ namespace ClassTest2
             str += "제조사: " + company + "\n";
             str += "색상: " + color + "\n";
             str += "가격: " + price + "\n";
-            str += "===================";
+            str += "===================\n";
             return str;
         }
     }

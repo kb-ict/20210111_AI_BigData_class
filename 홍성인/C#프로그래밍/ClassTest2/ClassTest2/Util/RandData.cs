@@ -17,7 +17,7 @@ namespace ClassTest2.Util
         static string[] addr = { "서울", "대전", "광주", "대구", "부산" };
         static string[] status = { "주임", "대리", "과장", "차장", "부장" };
         static string[] office = { "동구", "서구", "남구", "북구", "수성구" };
-        static string[] model = { "그란카브리오", "가야르도", "기블리", "르반떼", "과테르포르테" };
+        static string[] model = { "그란카브리오", "가야르도", "기블리", "르반떼", "우라칸" };
         static string[] color = { "블랙", "화이트", "네이비", "레드", "노란색" };
         static string[] price = { "1억원", "1억2천만원", "1억5천만원", "2억원", "2억5천만원" };
         static string[] company = { "마세라티", "포르쉐", "페라리", "벤틀리", "포드" };

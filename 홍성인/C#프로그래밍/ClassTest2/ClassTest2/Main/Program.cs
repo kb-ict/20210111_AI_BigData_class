@@ -34,9 +34,10 @@ namespace ClassTest2
                 switch(menu.mainMenu())
                 {
                     case Menu.MENU_MAIN_RAND:
-                        uHandler.CarHandle.insRandData(menu.getRandSize());
-                        uHandler.CustHandle.insRandData(menu.getRandSize());
-                        uHandler.SellHandle.insRandData(menu.getRandSize());
+                        //uHandler.CarHandle.insRandData(menu.getRandSize());
+                        //uHandler.CustHandle.insRandData(menu.getRandSize());
+                        //uHandler.SellHandle.insRandData(menu.getRandSize());
+                        uHandler.insRandData(menu.getRandSize());
                         break;
                     case Menu.MENU_MAIN_DEL_ALL:
                         uHandler.CarHandle.removeAll();
@@ -44,9 +45,11 @@ namespace ClassTest2
                         uHandler.SellHandle.removeAll();
                         break;
                     case Menu.MENU_MAIN_VIEW:
-                        uHandler.CarHandle.carView();
-                        uHandler.CustHandle.custView();
-                        uHandler.SellHandle.sellView();
+                        //uHandler.CarHandle.carView();
+                        //uHandler.CustHandle.custView();
+                        //uHandler.SellHandle.sellView();
+                        uHandler.dealViewAll();
+                        //uHandler.dealView();
                         break;
                     case Menu.MENU_MAIN_ADD:
                         switch (menu.subAddMenu())
