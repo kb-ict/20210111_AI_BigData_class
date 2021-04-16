@@ -1,4 +1,5 @@
 ﻿using CustCar0415.Controll;
+using CustCar0415.UI;
 using CustCar0415.Util;
 using MaterialSkin.Controls;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,14 +35,62 @@ namespace CustCar0415
             Application.Exit();
         }
 
-        private void cxFlatRoundButton1_Click(object sender, EventArgs e)
+        private void randInsert_Click(object sender, EventArgs e)
         {
-            uHandler.insRandData(menu.getRandSize());
+            string size = myInputBox("랜덤하게 생성할 데이터 개수를 입력하세요", "랜덤 데이터 추가", "0");
+            if (size.Equals(""))
+                //uHandler.insRandData(1);
+                return;
+            else
+                uHandler.insRandData(Convert.ToInt32(size));
+        }
+        
+        private void dataView_Click(object sender, EventArgs e)
+        {
+            uHandler.dealView();
+            //new DealView().Show();
+            // uHandler
+            //new DealView().ShowDialog();
+            DealView s = new DealView();
+            s.addSome(uHandler);
+            s.ShowDialog();
         }
 
-        private void cxFlatRoundButton5_Click(object sender, EventArgs e)
+        public string myInputBox(string title, string body, string prompt)
         {
-            uHandler.dealViewAll();
+            return Microsoft.VisualBasic.Interaction.InputBox(title, body, prompt);
+        }
+
+        public void initFont()
+        {
+            // 버튼 폰트 적용
+            CxFlatUI.CxFlatRoundButton[] btnArr =
+                {randInsert, randDel, dataView, dataInsert, dataDel, dataUpdate};
+            PrivateFontCollection pFont = new PrivateFontCollection();
+            pFont.AddFontFile("hangeul.ttf");
+            Font font = new Font(pFont.Families[0], 16f);
+            //randInsert.Font = font;
+
+            // CxFlatUI.CxFlatRoundButton = var 와 동일
+            // btnArr의 각각의 요소들을 n 으로 넘겨준다
+            // randInsert, randDel, dataView, dataInsert, dataDel, dataUpdate 의 순서로 넘겨준다
+            // btnArr 의 주소값을 n 으로 넘겨준다 ( = 포인터 ) 
+            foreach (var n in btnArr)
+            {
+                n.Font = font;
+            }
+            mainTitle.Font = font;
+        }
+
+        // 화면이 보이기 시작하는 전 단계
+        private void MainWin_Load(object sender, EventArgs e)
+        {
+            initFont();
+        }
+
+        private void randDel_Click(object sender, EventArgs e)
+        {
+            uHandler.removeAll();
         }
     }
 }

@@ -13,3 +13,4 @@ D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.csproj.CopyComplete
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.exe
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.pdb
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.DealView.resources

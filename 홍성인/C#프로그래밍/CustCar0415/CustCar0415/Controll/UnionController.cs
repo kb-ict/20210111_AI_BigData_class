@@ -13,7 +13,7 @@ namespace CustCar0415.Controll
         CarController carHandle;
         CustController custHandle;
         SellController sellHandle;
-        List<Deal<Car, Customer, Seller>> listUn = new List<Deal<Car, Customer, Seller>>();
+        public List<Deal<Car, Customer, Seller>> listUn = new List<Deal<Car, Customer, Seller>>();
         RandData rand;
 
         // 3.생성자 오버로딩
@@ -44,6 +44,8 @@ namespace CustCar0415.Controll
         }
         public void insRandData(int count)
         {
+            if (listUn != null)
+                Console.WriteLine(listUn.Count);
             for (int i = 0; i < count; i++)
             {
                 listUn.Add(new Deal<Car, Customer, Seller>(new Car(rand.getModel(), rand.getColor(), rand.getCompany(), rand.getPrice()),
@@ -53,6 +55,11 @@ namespace CustCar0415.Controll
                     DateTime.Now.ToString("HH:mm분:ss초"),
                     rand.getPrice() + "500만원"
                     ));
+            }
+            Console.WriteLine(listUn.Count);
+            for(int i=0; i<listUn.Count; i++)
+            {
+                listUn[i].dealInfo();
             }
         }
 
@@ -84,6 +91,16 @@ namespace CustCar0415.Controll
                 listUn[i].dealInfo();
                 Console.WriteLine("================");
             }
+        }
+
+        public void removeAll()
+        {
+            if (listUn.Count == 0)
+            {
+                Console.WriteLine("거래 데이터가 존재하지 않습니다.");
+                return;
+            }
+            listUn.Clear();
         }
     }
 }

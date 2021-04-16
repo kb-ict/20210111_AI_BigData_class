@@ -42,6 +42,7 @@
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="SunnyUI, Version=3.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SunnyUI.3.0.3\lib\net40\SunnyUI.dll</HintPath>
     </Reference>
@@ -72,6 +73,12 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Deal.cs" />
     <Compile Include="Model\Seller.cs" />
+    <Compile Include="UI\DealView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DealView.Designer.cs">
+      <DependentUpon>DealView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\MyMenu.cs" />
     <Compile Include="Util\RandData.cs" />
+    <EmbeddedResource Include="UI\DealView.resx">
+      <DependentUpon>DealView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,7 +104,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Font\WiggleHangeul.ttf" />
+    <None Include="Font\wiggle-doodle.ttf" />
+    <None Include="Font\hangeul.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
