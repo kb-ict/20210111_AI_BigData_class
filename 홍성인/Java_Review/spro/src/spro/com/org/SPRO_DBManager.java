@@ -6,7 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class SPRO_DBManager {
-	public int ckLogin(String id,String pw) {
+	public SPRO_MEMBER ckLogin(String id,String pw) {
+		SPRO_MEMBER member = null;
+		
 		Connection conn = null;						//DB 연결객체
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -22,14 +24,15 @@ public class SPRO_DBManager {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				return 0;					// 가져온게 있어서 login success
-			}
-			else {
-				return -1;					// 가져온게 없어서 login fail
+				member = new SPRO_MEMBER();
+				member.setId(id);
+				member.setPw(pw);
+				member.setName(rs.getString("name"));
+				member.setPhone(rs.getString("phone"));
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
-			return -1;
+			
 		}
 		finally {
 			try{
@@ -40,5 +43,6 @@ public class SPRO_DBManager {
 				
 			}
 		}
+		return member;
 	}
 }

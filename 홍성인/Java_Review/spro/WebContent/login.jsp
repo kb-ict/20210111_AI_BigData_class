@@ -1,3 +1,4 @@
+<%@page import="spro.com.org.SPRO_MEMBER"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="spro.com.org.SPRO_DBManager" %>    
@@ -19,9 +20,16 @@
 	out.println("pw ="+pw);
 	
 	SPRO_DBManager sdbm = new SPRO_DBManager();
-	int ret = sdbm.ckLogin(id,pw);
-	if(ret == 0){
+	SPRO_MEMBER ret = sdbm.ckLogin(id,pw);
+	if(ret != null){
 		out.println("로그인 성공");
+		
+		session.setAttribute("id", id);
+		session.setAttribute("pw", pw);
+		session.setAttribute("name", "ret.getName");
+		session.setAttribute("phone", "ret.getPhone");
+		out.println("세션 저장 성공");
+		out.println("<a href='index.jsp' class='btn btn-primary'>메인페이지</a>");
 	}
 	else{
 		out.println("로그인 실패");

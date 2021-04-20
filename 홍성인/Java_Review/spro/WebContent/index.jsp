@@ -14,8 +14,8 @@
 			location.href = 'idsearch.jsp'; //버튼 누르면 idsearch.jsp로 이동
 		}
 		document.getElementById('login').onclick=function(){
-	//		var id = document.getElementById('id');
-	//		var pw = document.getElementById('pw');
+			var id = document.getElementById('id');
+			var pw = document.getElementById('pw');
 	//		alert('id='+id.value);
 	//		alert('pw='+pw.value);
 			location.href = 'login.jsp?id='+id.value+'&pw='+pw.value; 
