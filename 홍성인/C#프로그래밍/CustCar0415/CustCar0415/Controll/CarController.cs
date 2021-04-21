@@ -1,4 +1,5 @@
-﻿using CustCar0415.Model;
+﻿using CustCar0415.Common;
+using CustCar0415.Model;
 using CustCar0415.Util;
 using System;
 using System.Collections.Generic;
@@ -8,19 +9,23 @@ using System.Threading.Tasks;
 
 namespace CustCar0415.Controll
 {
-    class CarController
+    //  BaseController 상속 , ':' 은 상속의 의미
+    class CarController : BaseController
     {
-        const int OLD_MODEL = 0;
-        const int NEW_MODEL = 1;
-        List<Car> listCar = new List<Car>();
-        RandData rand;
+        List<Car> listCar;
+
+        // List<Car> listCar; 선택 후 캡슐화 = getter setter 설정
+        internal List<Car> ListCar { get => listCar; set => listCar = value; }          
 
         public CarController(RandData rand)
         {
+            listItem = new List<object>();
+            listCar = listItem.Cast<Car>().ToList();
             this.rand = rand;
         }
 
-        public void insRandData(int count)
+
+        public override void insRandData(int count)
         {
             for (int i = 0; i < count; i++)
             {
@@ -28,7 +33,7 @@ namespace CustCar0415.Controll
             }
         }
 
-        public void carView()
+        public override void itemView()
         {
             if (listCar.Count == 0)
             {
@@ -42,16 +47,7 @@ namespace CustCar0415.Controll
             }
         }
 
-        public void carView2()
-        {
-            for (int i = 0; i < listCar.Count; i++)
-            {
-                Console.WriteLine("번호: " + (i + 1));
-                listCar[i].printInfoCar();
-            }
-        }
-
-        public void removeAll()
+        public override void removeAll()
         {
             if (listCar.Count == 0)
             {
@@ -61,30 +57,29 @@ namespace CustCar0415.Controll
             listCar.Clear();
         }
 
-        public void addCarItem(Car car)
+        public override void addItem(object item)
         {
-            listCar.Add(car);
+            listCar.Add(item as Car);                                       // <----- object 타입을 Car 타입으로 변환
         }
 
-        public void delCarItem(string model)
+        public override void delItem(string item)
         {
             for (int i = 0; i < listCar.Count; i++)
             {
-                if (listCar[i].Model.Equals(model))
+                if (listCar[i].Model.Equals(item))
                 {
-                    listCar.RemoveAt(i--);                           // <------ i를 i--로 수정 ( 삭제 부분 버그 )
+                    listCar.RemoveAt(i--);                                  // <------ i를 i--로 수정 ( 삭제 부분 버그 )
                 }
             }
         }
 
-
-        public void updateCarItem(string[] model)
+        public override void updateItem(string[] item)
         {
             for (int i = 0; i < listCar.Count; i++)
             {
-                if (listCar[i].Model.Equals(model[OLD_MODEL]))
+                if (listCar[i].Model.Equals(item[CommMenu.OLD_MODEL]))      //  CommMenu 로 수정한 이유
                 {
-                    listCar[i].Model = model[NEW_MODEL];
+                    listCar[i].Model = item[CommMenu.NEW_MODEL];
                 }
             }
         }

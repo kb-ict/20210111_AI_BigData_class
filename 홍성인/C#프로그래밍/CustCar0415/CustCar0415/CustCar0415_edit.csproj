@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BaseController.cs" />
     <Compile Include="Common\CommMenu.cs" />
     <Compile Include="Controll\CarController.cs" />
     <Compile Include="Controll\CustController.cs" />
@@ -73,6 +74,12 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Deal.cs" />
     <Compile Include="Model\Seller.cs" />
+    <Compile Include="UI\AddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddCar.Designer.cs">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DealView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\MyMenu.cs" />
     <Compile Include="Util\RandData.cs" />
+    <EmbeddedResource Include="UI\AddCar.resx">
+      <DependentUpon>AddCar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DealView.resx">
       <DependentUpon>DealView.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Font\wiggle-doodle.ttf" />
     <None Include="Font\hangeul.ttf" />
@@ -132,6 +143,19 @@
     <Content Include="Resource\gran.jpg" />
     <Content Include="Resource\img.jpg" />
     <Content Include="Resource\unnamed.jpg" />
+    <None Include="Resource\우라칸측면3.jpg" />
+    <None Include="Resource\우라칸정면.jpg" />
+    <None Include="Resource\우라칸실내1.jpg" />
+    <None Include="Resource\우라칸내부.jpg" />
+    <None Include="Resource\그란실내.jpg" />
+    <None Include="Resource\그란정면.jpg" />
+    <None Include="Resource\그란측면.jfif" />
+    <None Include="Resource\그란측면1.jpg" />
+    <None Include="Resource\그란내부5.jfif" />
+    <None Include="Resource\가야르도실내1.jpg" />
+    <None Include="Resource\가야르도실내2.jpg" />
+    <None Include="Resource\가야르도정면.jpg" />
+    <None Include="Resource\가야르도측면.jpg" />
     <Content Include="Resource\다운로드.jfif" />
   </ItemGroup>
   <ItemGroup />

@@ -1,4 +1,5 @@
-﻿using CustCar0415.Model;
+﻿using CustCar0415.Common;
+using CustCar0415.Model;
 using CustCar0415.Util;
 using System;
 using System.Collections.Generic;
@@ -8,19 +9,18 @@ using System.Threading.Tasks;
 
 namespace CustCar0415.Controll
 {
-    class SellController
+    class SellController : BaseController                   // ★★★ 상속 후 반드시 추상 클래스 구현(오버라이딩) 한다
     {
-        const int OLD_MODEL = 0;
-        const int NEW_MODEL = 1;
-        List<Seller> listSell = new List<Seller>();
-        RandData rand;
+        List<Seller> listSell;
 
         public SellController(RandData rand)
         {
+            listItem = new List<object>();                  // ★★★ 부로로부터 상속 받은 객체 생성
+            listSell = listItem.Cast<Seller>().ToList();
             this.rand = rand;
         }
 
-        public void insRandData(int count)
+        public override void insRandData(int count)
         {
             for (int i = 0; i < count; i++)
             {
@@ -28,7 +28,7 @@ namespace CustCar0415.Controll
             }
         }
 
-        public void sellView()
+        public override void itemView()
         {
             if (listSell.Count == 0)
             {
@@ -42,49 +42,34 @@ namespace CustCar0415.Controll
             }
         }
 
-        public void sellView2()
+        public override void removeAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void addItem(object item)
+        {
+            listSell.Add(item as Seller);                                   // type casting ( 강제형변환 ) 하기
+        }
+
+        public override void delItem(string item)
         {
             for (int i = 0; i < listSell.Count; i++)
             {
-                Console.WriteLine("번호: " + (i + 1));
-                listSell[i].SellerInfo();
-            }
-        }
-
-        public void removeAll()
-        {
-            if (listSell.Count == 0)
-            {
-                Console.WriteLine("데이터가 존재하지 않습니다.");
-                return;
-            }
-            listSell.Clear();
-        }
-
-        public void addSellItem(Seller sell)
-        {
-            listSell.Add(sell);
-        }
-
-        public void delSellItem(string name)
-        {
-            for (int i = 0; i < listSell.Count; i++)
-            {
-                if (listSell[i].Name.Equals(name))
+                if (listSell[i].Name.Equals(item))
                 {
-                    listSell.RemoveAt(i--);                           // <------ i를 i--로 수정 ( 삭제 부분 버그 )
+                    listSell.RemoveAt(i--);                                 // <------ i를 i--로 수정 ( 삭제 부분 버그 )
                 }
             }
         }
 
-
-        public void updateSellItem(string[] name)
+        public override void updateItem(string[] item)
         {
             for (int i = 0; i < listSell.Count; i++)
             {
-                if (listSell[i].Name.Equals(name[OLD_MODEL]))
+                if (listSell[i].Name.Equals(item[CommMenu.OLD_MODEL]))      // item , CommMenu 수정
                 {
-                    listSell[i].Name = name[NEW_MODEL];
+                    listSell[i].Name = item[CommMenu.NEW_MODEL];
                 }
             }
         }

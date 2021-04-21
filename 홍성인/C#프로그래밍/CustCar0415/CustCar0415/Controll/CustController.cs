@@ -1,4 +1,5 @@
-﻿using CustCar0415.Model;
+﻿using CustCar0415.Common;
+using CustCar0415.Model;
 using CustCar0415.Util;
 using System;
 using System.Collections.Generic;
@@ -8,19 +9,20 @@ using System.Threading.Tasks;
 
 namespace CustCar0415.Controll
 {
-    class CustController
+    class CustController : BaseController           // 반드시 오버라이딩을 해야 하는 추상 메소드가 들어가 있기 때문에
     {
-        const int OLD_MODEL = 0;
-        const int NEW_MODEL = 1;
-        List<Customer> listCust = new List<Customer>();
-        RandData rand;
+        List<Customer> listCust;                    // <--- 이 부분 드래그 후 필드 캡슐화 ( getter setter )
+
+        internal List<Customer> ListCust { get => listCust; set => listCust = value; }
 
         public CustController(RandData rand)
         {
-            this.rand = rand;
+            this.rand = rand;                       // this = CustController를 가리킨다
+            listItem = new List<object>();
+            listCust = listItem.Cast<Customer>().ToList();
         }
 
-        public void insRandData(int count)
+        public override void insRandData(int count)
         {
             for (int i = 0; i < count; i++)
             {
@@ -28,7 +30,7 @@ namespace CustCar0415.Controll
             }
         }
 
-        public void custView()
+        public override void itemView()
         {
             if (listCust.Count == 0)
             {
@@ -42,16 +44,7 @@ namespace CustCar0415.Controll
             }
         }
 
-        public void custView2()
-        {
-            for (int i = 0; i < listCust.Count; i++)
-            {
-                Console.WriteLine("번호: " + (i + 1));
-                listCust[i].CustomerInfo();
-            }
-        }
-
-        public void removeAll()
+        public override void removeAll()
         {
             if (listCust.Count == 0)
             {
@@ -61,30 +54,29 @@ namespace CustCar0415.Controll
             listCust.Clear();
         }
 
-        public void addCustItem(Customer cust)
+        public override void addItem(object item)
         {
-            listCust.Add(cust);
+            listCust.Add(item as Customer);                             // type casting (강제형변환) 해주기
         }
 
-        public void delCustItem(string name)
+        public override void delItem(string item)
         {
             for (int i = 0; i < listCust.Count; i++)
             {
-                if (listCust[i].Name.Equals(name))
+                if (listCust[i].Name.Equals(item))
                 {
                     listCust.RemoveAt(i--);                           // <------ i를 i--로 수정 ( 삭제 부분 버그 )
                 }
             }
         }
 
-
-        public void updateCustItem(string[] name)
+        public override void updateItem(string[] item)
         {
             for (int i = 0; i < listCust.Count; i++)
             {
-                if (listCust[i].Name.Equals(name[OLD_MODEL]))
+                if (listCust[i].Name.Equals(item[CommMenu.OLD_MODEL]))
                 {
-                    listCust[i].Name = name[NEW_MODEL];
+                    listCust[i].Name = item[CommMenu.NEW_MODEL];
                 }
             }
         }

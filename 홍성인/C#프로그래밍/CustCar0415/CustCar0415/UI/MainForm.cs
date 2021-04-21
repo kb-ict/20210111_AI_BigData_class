@@ -1,6 +1,7 @@
 ﻿using CustCar0415.Controll;
 using CustCar0415.UI;
 using CustCar0415.Util;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,14 @@ namespace CustCar0415
         public MainWin()
         {
             InitializeComponent();
+            var msMgr = MaterialSkinManager.Instance;
+            msMgr.Theme = MaterialSkinManager.Themes.LIGHT;
+            msMgr.ColorScheme = new ColorScheme(
+                Primary.LightGreen200,
+                Primary.LightBlue500,
+                Primary.LightBlue500,
+                Accent.LightBlue200,
+                TextShade.WHITE);
         }
 
         private void help_Click(object sender, EventArgs e)
@@ -47,13 +56,11 @@ namespace CustCar0415
         
         private void dataView_Click(object sender, EventArgs e)
         {
-            uHandler.dealView();
-            //new DealView().Show();
-            // uHandler
-            //new DealView().ShowDialog();
-            DealView s = new DealView();
-            s.addSome(uHandler);
-            s.ShowDialog();
+            uHandler.itemView();                                // dealView -> itemView 로 변경
+            new DealView(uHandler).ShowDialog();
+            //DealView s = new DealView();
+            //s.addSome(uHandler);
+            //s.ShowDialog();
         }
 
         public string myInputBox(string title, string body, string prompt)
@@ -91,6 +98,11 @@ namespace CustCar0415
         private void randDel_Click(object sender, EventArgs e)
         {
             uHandler.removeAll();
+        }
+
+        private void dataInsert_Click(object sender, EventArgs e)
+        {
+            new AddCar().ShowDialog();
         }
     }
 }

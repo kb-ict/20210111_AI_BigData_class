@@ -1,4 +1,6 @@
-﻿using CustCar0415.Controll;
+﻿using CustCar0415.Common;
+using CustCar0415.Controll;
+using CustCar0415.Model;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -12,35 +14,35 @@ using System.Windows.Forms;
 
 namespace CustCar0415.UI
 {
-    public partial class DealView : MaterialForm
+    partial class DealView : MaterialForm
     {
-        UnionController temp;
+        UnionController uHandler;
         public DealView()
         {
             InitializeComponent();
         }
+        public DealView(UnionController uHandler)            // <--- 싱글톤 check !!!
+        {
+            InitializeComponent();
+            this.uHandler = uHandler;
+        }
 
         private void initDealSmListView()
         {
-            //string[] data = { "1", "그란카브리오", "2억5천만원", "홍성인", "전우치", "2021년4월16일", "2억3천만원" };
-            //dealSmListview.Items.Add(new ListViewItem(data));
-            //for (int i=0; i<50; i++)
-            if (temp.listUn == null || temp.listUn.Count == 0)
-                return;
-            for (int i = 0; i < temp.listUn.Count; i++)
+            List<Deal<Car, Customer, Seller>> list = uHandler.ListUn;         // <----- 추가
+            
+            for (int i = 0; i < list.Count; i++)
             {
                 dealSmListview.Items.Add(new ListViewItem(new string[]
                 {
                     (i+1).ToString(),
-                    temp.listUn[i].Car.Model,
-                    temp.listUn[i].Car.Price,
-                    temp.listUn[i].Customer.Name,
-                    temp.listUn[i].Seller.Name,
-                    temp.listUn[i].Date,
-                    temp.listUn[i].Price
+                    list[i].Car.Model,
+                    list[i].Car.Price,
+                    list[i].Customer.Name,
+                    list[i].Seller.Name,
+                    list[i].Date,list[i].Price
                 }
                 ));
-
             }
             // 색 넣기
             setRowColor(Color.White, Color.LightBlue);
@@ -49,6 +51,7 @@ namespace CustCar0415.UI
             dealSmListview.Items[index].Selected = true;
             dealSmListview.Items[index].Focused = true;
             dealSmListview.EnsureVisible(index);
+            CommMenu.colorListViewHeader(ref dealSmListview,Color.Black,Color.White); // <-----추가, ref는 '포인터' 개념
         }
 
         private void DealView_Load(object sender, EventArgs e)
@@ -76,11 +79,6 @@ namespace CustCar0415.UI
                     item.BackColor = color2;
                 }
             }
-        }
-
-        internal void addSome(UnionController uHandler)
-        {
-            temp = uHandler;
         }
     }
 }

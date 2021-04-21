@@ -29,12 +29,10 @@ namespace CustCar0415.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dealSmListview = new System.Windows.Forms.ListView();
-            this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            this.dealSmExit = new Sunny.UI.UISymbolButton();
             this.dealSmCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dealSmModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dealSmPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,6 +40,8 @@ namespace CustCar0415.UI
             this.dealSmSellName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dealSmDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dealSmRealPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            this.dealSmExit = new Sunny.UI.UISymbolButton();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,28 +64,60 @@ namespace CustCar0415.UI
             this.dealSmListview.UseCompatibleStateImageBehavior = false;
             this.dealSmListview.View = System.Windows.Forms.View.Details;
             // 
+            // dealSmCount
+            // 
+            this.dealSmCount.Text = "번호";
+            // 
+            // dealSmModel
+            // 
+            this.dealSmModel.Text = "차종";
+            this.dealSmModel.Width = 120;
+            // 
+            // dealSmPrice
+            // 
+            this.dealSmPrice.Text = "차량가격";
+            this.dealSmPrice.Width = 120;
+            // 
+            // dealSmCustName
+            // 
+            this.dealSmCustName.Text = "구매고객";
+            // 
+            // dealSmSellName
+            // 
+            this.dealSmSellName.Text = "판매자";
+            // 
+            // dealSmDate
+            // 
+            this.dealSmDate.Text = "거래날짜";
+            this.dealSmDate.Width = 120;
+            // 
+            // dealSmRealPrice
+            // 
+            this.dealSmRealPrice.Text = "실거래가";
+            this.dealSmRealPrice.Width = 120;
+            // 
             // uiDataGridView1
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.uiDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.Location = new System.Drawing.Point(26, 385);
             this.uiDataGridView1.Name = "uiDataGridView1";
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.uiDataGridView1.RowTemplate.Height = 29;
             this.uiDataGridView1.SelectedIndex = -1;
             this.uiDataGridView1.ShowGridLine = true;
@@ -110,53 +142,17 @@ namespace CustCar0415.UI
             this.dealSmExit.TabIndex = 2;
             this.dealSmExit.Click += new System.EventHandler(this.dealSmExit_Click);
             // 
-            // dealSmCount
-            // 
-            this.dealSmCount.Text = "번호";
-            // 
-            // dealSmModel
-            // 
-            this.dealSmModel.Text = "차종";
-            this.dealSmModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dealSmModel.Width = 120;
-            // 
-            // dealSmPrice
-            // 
-            this.dealSmPrice.Text = "차량가격";
-            this.dealSmPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dealSmPrice.Width = 120;
-            // 
-            // dealSmCustName
-            // 
-            this.dealSmCustName.Text = "구매고객";
-            this.dealSmCustName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dealSmSellName
-            // 
-            this.dealSmSellName.Text = "판매자";
-            this.dealSmSellName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dealSmDate
-            // 
-            this.dealSmDate.Text = "거래날짜";
-            this.dealSmDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dealSmDate.Width = 120;
-            // 
-            // dealSmRealPrice
-            // 
-            this.dealSmRealPrice.Text = "실거래가";
-            this.dealSmRealPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dealSmRealPrice.Width = 120;
-            // 
             // DealView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 605);
+            this.ControlBox = false;
             this.Controls.Add(this.dealSmExit);
             this.Controls.Add(this.uiDataGridView1);
             this.Controls.Add(this.dealSmListview);
             this.Name = "DealView";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "데이터 보기";
             this.Load += new System.EventHandler(this.DealView_Load);
