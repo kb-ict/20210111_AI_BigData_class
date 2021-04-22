@@ -13,5 +13,9 @@ D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415_edit.csproj.CopyComplete
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.exe
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.pdb
-D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415_edit.csprojAssemblyReference.cache
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.AddCar.resources
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.AddCust.resources
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.AddData.resources
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.UcAddCar.resources
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.UcAddCust.resources
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.UcAddSell.resources

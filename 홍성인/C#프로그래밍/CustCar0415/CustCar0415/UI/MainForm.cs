@@ -102,7 +102,8 @@ namespace CustCar0415
 
         private void dataInsert_Click(object sender, EventArgs e)
         {
-            new AddCar().ShowDialog();
+            //new AddCar(uHandler).ShowDialog();
+            new AddData(uHandler).ShowDialog();
         }
     }
 }

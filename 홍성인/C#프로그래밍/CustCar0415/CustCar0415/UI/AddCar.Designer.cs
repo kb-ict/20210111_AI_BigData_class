@@ -293,6 +293,7 @@ namespace CustCar0415.UI
             this.Controls.Add(this.comboCompany);
             this.Controls.Add(this.comboModel);
             this.Name = "AddCar";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddCar";
             ((System.ComponentModel.ISupportInitialize)(this.cxFlatPictureBox4)).EndInit();
