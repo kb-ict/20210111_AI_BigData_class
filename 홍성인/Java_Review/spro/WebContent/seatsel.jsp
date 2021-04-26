@@ -10,6 +10,43 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/spro/css/mycss.css"/>
+<script type="text/javascript">
+	$('document').ready(function(){	
+		// css
+		/*
+		 	1) #id명 : id 선택자
+		 	2) .class명 : class 선택자
+		 	3) tag명 : tag 선택자
+		 	ex)
+		 	$('#id명')
+		 	$('.class명')
+		 	$('h1')
+		*/
+		$('button').on('click',function(obj){
+			$('button').attr('class','btn btn-primary w80');
+			//모든 버튼 태그들을 'click'이라는 이벤트를 설정하고 btn btn-primary w80로 바꾼다
+			// 빨간색
+			$(this).attr('class','btn btn-danger w80');
+			//선택한 버튼 태그들의 속성으로 class의 btn btn-danger w80로 바꾼다
+			
+			//text() 태그 사이에 글자만 가져오기
+			//html() 태그 사이에 html 태그 포함해서 글자 가져오기
+			//val() input 태크에 있는 value 값 가져오기
+		});
+		$('#confirm').on('click',function(){
+			var seatnum = '';
+			$('button').each(function(index,obj){
+				if($(this).attr('class')=='btn btn-danger w80'){
+					//console.log("$(this).attr('class') = "+$(this).attr('class'));
+					//console.log("$(this).text() = "+$(this).text());
+					seat = $(this).text();
+				}
+				})
+			// 좌석이 빨간색인거 찾아서 seatsave.jsp 호출
+			location.href='seatsave.jsp?seat='+seat;
+		})
+	})
+</script>
 </head>
 <body>
 <div class="jumbotron">
@@ -63,8 +100,8 @@
 	<div class="row text-center mt-2">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-2"></div>
-		<div class="col-sm-2"><a id="cancel" class="btn btn-warning w80">취소</a></div>
-		<div class="col-sm-2"><a id="confirm" class="btn btn-warning w80">확인</a></div>
+		<div class="col-sm-2"><input type="button" id="cancel" class="btn btn-warning w80" value="취소"/></div>
+		<div class="col-sm-2"><input type="button" id="confirm" class="btn btn-warning w80" value="확인"/></div>
 		<div class="col-sm-2"></div>
 		<div class="col-sm-2"></div>	
 	</div>
