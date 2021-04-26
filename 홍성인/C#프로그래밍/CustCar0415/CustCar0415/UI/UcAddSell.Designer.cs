@@ -55,6 +55,7 @@ namespace CustCar0415.UI
             this.ucAddSellInit.Symbol = 61453;
             this.ucAddSellInit.TabIndex = 28;
             this.ucAddSellInit.Text = "초기화";
+            this.ucAddSellInit.Click += new System.EventHandler(this.ucAddSellInit_Click);
             // 
             // ucAddSellOK
             // 
@@ -69,6 +70,7 @@ namespace CustCar0415.UI
             this.ucAddSellOK.Style = Sunny.UI.UIStyle.Custom;
             this.ucAddSellOK.TabIndex = 27;
             this.ucAddSellOK.Text = "확인";
+            this.ucAddSellOK.Click += new System.EventHandler(this.ucAddSellOK_Click);
             // 
             // ucAddSellOffice
             // 

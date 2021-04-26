@@ -1,4 +1,5 @@
 ﻿using CustCar0415.Controll;
+using CustCar0415.Model;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -47,10 +48,11 @@ namespace CustCar0415.UI
         public AddData(UnionController uHandler)
         {
             InitializeComponent();
+            this.uHandler = uHandler;
             //  객체 생성하기
             ucAddCar = new UcAddCar(uHandler,this);                 // this 값 = AddData 클래스 의미
             ucAddCust = new UcAddCust(uHandler);                    // uHandler 추가하기
-            ucAddSell = new UcAddSell();
+            ucAddSell = new UcAddSell(uHandler);
             centerLayout.Controls.Add(ucAddCar);
             centerLayout.Dock = DockStyle.Fill;
             ucAddCar.addCarConfirmEvent += addCarConfirmHandler;
@@ -103,6 +105,19 @@ namespace CustCar0415.UI
         private void addCarConfirmHandler(object sender, EventArgs e)
         {
             addDataStatus.Text = "차량 정보를 등록하였습니다.";
+        }
+
+        private void addDataDeal_Click(object sender, EventArgs e)
+        {
+            uHandler.ListUn.Add(
+                new Deal<Car, Customer, Seller>(
+                    uHandler.CarHandle.ListCar[0],
+                    uHandler.CustHandle.ListCust[0],
+                    uHandler.SellHandle.ListSell[0],                //SellController.cs에서 필드 캡슐화로 해결
+                    DateTime.Now.ToString("yyyy년MM월dd일"),
+                    uHandler.CarHandle.ListCar[0].Price+"300만원"));
+            MessageBox.Show("거래정보가 등록되었습니다.");
+            Close();
         }
     }
 }

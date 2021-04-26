@@ -13,6 +13,8 @@ namespace CustCar0415.Controll
     {
         List<Seller> listSell;
 
+        internal List<Seller> ListSell { get => listSell; set => listSell = value; }
+
         public SellController(RandData rand)
         {
             listItem = new List<object>();                  // ★★★ 부로로부터 상속 받은 객체 생성

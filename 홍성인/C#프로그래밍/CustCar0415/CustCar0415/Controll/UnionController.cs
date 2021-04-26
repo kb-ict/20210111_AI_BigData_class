@@ -64,7 +64,8 @@ namespace CustCar0415.Controll
                 Console.WriteLine(listUn.Count);
             for (int i = 0; i < count; i++)
             {
-                listUn.Add(new Deal<Car, Customer, Seller>(new Car(rand.getModel(), rand.getColor(), rand.getCompany(), rand.getPrice()),
+                listUn.Add(new Deal<Car, Customer, Seller>(
+                    new Car(rand.getModel(), rand.getColor(), rand.getCompany(), rand.getPrice()),
                     new Customer(rand.getName(), rand.getAge(), rand.getTel(), rand.getAddress(), rand.getGender()),
                     new Seller(rand.getName(), rand.getTel(), rand.getStatus(), rand.getOffice()),
                     DateTime.Now.ToString("yyyy년MM월dd일-") +

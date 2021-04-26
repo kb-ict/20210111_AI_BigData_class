@@ -30,14 +30,14 @@ namespace CustCar0415.UI
         private void InitializeComponent()
         {
             this.topLayer = new System.Windows.Forms.Panel();
+            this.addDataStatus = new Sunny.UI.UISymbolLabel();
             this.addDataExit = new Sunny.UI.UISymbolButton();
             this.leftLayout = new System.Windows.Forms.Panel();
-            this.addDataCancel = new Sunny.UI.UIHeaderButton();
+            this.addDataDeal = new Sunny.UI.UIHeaderButton();
             this.addDataSell = new Sunny.UI.UIHeaderButton();
             this.addDataCust = new Sunny.UI.UIHeaderButton();
             this.addDataCar = new Sunny.UI.UIHeaderButton();
             this.centerLayout = new System.Windows.Forms.Panel();
-            this.addDataStatus = new Sunny.UI.UISymbolLabel();
             this.topLayer.SuspendLayout();
             this.leftLayout.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,22 @@ namespace CustCar0415.UI
             this.topLayer.Size = new System.Drawing.Size(1350, 85);
             this.topLayer.TabIndex = 0;
             this.topLayer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topLayer_MouseMove);
+            // 
+            // addDataStatus
+            // 
+            this.addDataStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.addDataStatus.ForeColor = System.Drawing.Color.White;
+            this.addDataStatus.Location = new System.Drawing.Point(28, -5);
+            this.addDataStatus.MinimumSize = new System.Drawing.Size(1, 1);
+            this.addDataStatus.Name = "addDataStatus";
+            this.addDataStatus.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.addDataStatus.Size = new System.Drawing.Size(888, 71);
+            this.addDataStatus.Style = Sunny.UI.UIStyle.Custom;
+            this.addDataStatus.Symbol = 61442;
+            this.addDataStatus.SymbolColor = System.Drawing.Color.White;
+            this.addDataStatus.TabIndex = 17;
+            this.addDataStatus.Text = "상태 정보";
+            this.addDataStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // addDataExit
             // 
@@ -73,7 +89,7 @@ namespace CustCar0415.UI
             // leftLayout
             // 
             this.leftLayout.BackColor = System.Drawing.Color.Transparent;
-            this.leftLayout.Controls.Add(this.addDataCancel);
+            this.leftLayout.Controls.Add(this.addDataDeal);
             this.leftLayout.Controls.Add(this.addDataSell);
             this.leftLayout.Controls.Add(this.addDataCust);
             this.leftLayout.Controls.Add(this.addDataCar);
@@ -83,26 +99,26 @@ namespace CustCar0415.UI
             this.leftLayout.Size = new System.Drawing.Size(218, 707);
             this.leftLayout.TabIndex = 1;
             // 
-            // addDataCancel
+            // addDataDeal
             // 
-            this.addDataCancel.CircleColor = System.Drawing.Color.Transparent;
-            this.addDataCancel.CircleSize = 100;
-            this.addDataCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addDataCancel.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.addDataCancel.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addDataCancel.Location = new System.Drawing.Point(3, 532);
-            this.addDataCancel.MinimumSize = new System.Drawing.Size(1, 1);
-            this.addDataCancel.Name = "addDataCancel";
-            this.addDataCancel.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
-            this.addDataCancel.Radius = 0;
-            this.addDataCancel.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
-            this.addDataCancel.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
-            this.addDataCancel.Size = new System.Drawing.Size(209, 172);
-            this.addDataCancel.Style = Sunny.UI.UIStyle.Custom;
-            this.addDataCancel.Symbol = 61457;
-            this.addDataCancel.TabIndex = 2;
-            this.addDataCancel.Text = "종료";
-            this.addDataCancel.Click += new System.EventHandler(this.addDataExit_Click);
+            this.addDataDeal.CircleColor = System.Drawing.Color.Transparent;
+            this.addDataDeal.CircleSize = 100;
+            this.addDataDeal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addDataDeal.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.addDataDeal.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDataDeal.Location = new System.Drawing.Point(3, 532);
+            this.addDataDeal.MinimumSize = new System.Drawing.Size(1, 1);
+            this.addDataDeal.Name = "addDataDeal";
+            this.addDataDeal.Padding = new System.Windows.Forms.Padding(0, 8, 0, 3);
+            this.addDataDeal.Radius = 0;
+            this.addDataDeal.RadiusSides = Sunny.UI.UICornerRadiusSides.None;
+            this.addDataDeal.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.addDataDeal.Size = new System.Drawing.Size(209, 172);
+            this.addDataDeal.Style = Sunny.UI.UIStyle.Custom;
+            this.addDataDeal.Symbol = 62133;
+            this.addDataDeal.TabIndex = 2;
+            this.addDataDeal.Text = "거래 정보 등록";
+            this.addDataDeal.Click += new System.EventHandler(this.addDataDeal_Click);
             // 
             // addDataSell
             // 
@@ -176,22 +192,6 @@ namespace CustCar0415.UI
             this.centerLayout.Size = new System.Drawing.Size(1132, 707);
             this.centerLayout.TabIndex = 2;
             // 
-            // addDataStatus
-            // 
-            this.addDataStatus.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.addDataStatus.ForeColor = System.Drawing.Color.White;
-            this.addDataStatus.Location = new System.Drawing.Point(28, -5);
-            this.addDataStatus.MinimumSize = new System.Drawing.Size(1, 1);
-            this.addDataStatus.Name = "addDataStatus";
-            this.addDataStatus.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.addDataStatus.Size = new System.Drawing.Size(888, 71);
-            this.addDataStatus.Style = Sunny.UI.UIStyle.Custom;
-            this.addDataStatus.Symbol = 61442;
-            this.addDataStatus.SymbolColor = System.Drawing.Color.White;
-            this.addDataStatus.TabIndex = 17;
-            this.addDataStatus.Text = "상태 정보";
-            this.addDataStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // AddData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -219,7 +219,7 @@ namespace CustCar0415.UI
         private Sunny.UI.UIHeaderButton addDataCar;
         private Sunny.UI.UIHeaderButton addDataSell;
         private Sunny.UI.UIHeaderButton addDataCust;
-        private Sunny.UI.UIHeaderButton addDataCancel;
+        private Sunny.UI.UIHeaderButton addDataDeal;
         private Sunny.UI.UISymbolLabel addDataStatus;
     }
 }

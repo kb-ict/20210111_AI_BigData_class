@@ -19,3 +19,4 @@ D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.UcAddCar.resources
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.UcAddCust.resources
 D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415.UI.UcAddSell.resources
+D:\20210111_AI_BigData_class\홍성인\C#프로그래밍\CustCar0415\CustCar0415\obj\Debug\CustCar0415_edit.csprojAssemblyReference.cache

@@ -18,12 +18,17 @@ namespace CustCar0415
 {
     public partial class MainWin : MaterialForm
     {
+        Font font;
+        PrivateFontCollection pFont;
+        CxFlatUI.CxFlatRoundButton[] btnArr;
+               
         MyMenu menu = new MyMenu();
         UnionController uHandler = new UnionController(new RandData());
 
         public MainWin()
         {
             InitializeComponent();
+            initFont();
             var msMgr = MaterialSkinManager.Instance;
             msMgr.Theme = MaterialSkinManager.Themes.LIGHT;
             msMgr.ColorScheme = new ColorScheme(
@@ -39,6 +44,7 @@ namespace CustCar0415
             MessageBox.Show("고객차량관리앱 v1.0\n" + "2021년4월15일 by 홍성인");
         }
 
+        // event를 발생시킨 객체 object, 해당 event의 정보를 가지는 event객체 
         private void MainExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -70,13 +76,13 @@ namespace CustCar0415
 
         public void initFont()
         {
+            btnArr = new CxFlatUI.CxFlatRoundButton[]
+            { randInsert, randDel, dataView, dataInsert, dataDel, dataUpdate};
             // 버튼 폰트 적용
-            CxFlatUI.CxFlatRoundButton[] btnArr =
-                {randInsert, randDel, dataView, dataInsert, dataDel, dataUpdate};
-            PrivateFontCollection pFont = new PrivateFontCollection();
+            
+            pFont = new PrivateFontCollection();
             pFont.AddFontFile("hangeul.ttf");
             Font font = new Font(pFont.Families[0], 16f);
-            //randInsert.Font = font;
 
             // CxFlatUI.CxFlatRoundButton = var 와 동일
             // btnArr의 각각의 요소들을 n 으로 넘겨준다
@@ -92,7 +98,7 @@ namespace CustCar0415
         // 화면이 보이기 시작하는 전 단계
         private void MainWin_Load(object sender, EventArgs e)
         {
-            initFont();
+            //initFont();
         }
 
         private void randDel_Click(object sender, EventArgs e)
