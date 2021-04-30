@@ -45,6 +45,11 @@ exam3 <-list(kor=c(100,95,90),
              math=c(95,90,85))
 exam3
 
+# 샘 코드
+kor <- c(100,90,80)
+eng <- c(95,85,90)
+math <- c(85,80,100)
+
 # 4번
 exam4 <-data.frame(kor,eng,math)
 exam4
@@ -81,3 +86,90 @@ answer5_1
 answer5_2 <- apply(answer4,2,max)
 answer5_2
 #===============================================================================
+
+txtData <- read.table('res/data_ex.txt')
+View(txtData)
+
+# header : 데이터에서 1행이 변수명인지 판별
+# ex) 1행이 변수명이면 header = TRUE
+
+# skip : 특정 행까지 제외하고 데이터 가져오기
+# ex) 3행부터 가져오기 -> skip = 2
+
+# nrows : 특정 행까지 데이터 가져오기
+# ex) 7행까지 데이터 가져오기 -> nrows = 7
+
+# sep : 데이터 구분자 지정
+# ex) 쉼표로 구분된 데이터 집합 -> ','
+
+textData1 <- read.table('res/data_ex1.txt',
+                        header = TRUE,
+                        sep = ',')
+View(textData1)
+varName <- c('ID','성별','나이','지역','기타')
+txtVar <- read.table('res/data_ex2.txt',
+                     sep = ',',
+                     col.names = varName)
+View(txtVar)
+
+# .rda(통계용 파일)
+id <- c(1,2,3,4,5)
+name <- c('홍길동','김길동','이길동','박길동','최길동')
+rdaData <- data.frame(ID=id, NAME=name)
+
+# rda file 저장
+save(rdaData, file='res/data_ex.rda')
+load('res/data_ex.rda')
+View(rdaData)
+
+#===============================================================================
+
+id <- c(1,2,3,4,5)
+name <- c('홍길동','김길동','이길동','박길동','최길동')
+
+dataCsv <- data.frame(ID=id,NAME=name)
+write.csv(dataCsv, file = 'res/data_ex.csv')
+
+dataTxt <- data.frame(ID=id, NAME=name)
+write.table(dataTxt,file = 'res/data_ex_sav.txt')
+
+titanic <- read.csv('https://vincentarelbundock.github.io/Rdatasets/csv/COUNT/titanic.csv')
+titanic
+
+# data 차수 확인
+dim(titanic)
+# data 구조 확인
+str(titanic)
+
+# data 빈도 확인
+table(titanic$age)
+table(titanic$sex)
+table(titanic$survived)
+
+head(titanic)
+tail(titanic)
+
+# 교차 분할표
+tab <- table(titanic$survived, titanic$sex)
+tab
+
+plot(tab, col=c('green','blue'),
+     main = '성별에 따른 생존 여부')
+
+barplot(tab, col = c('green','blue'),
+        main = '성별에 따른 생존 여부')
+
+write.table(titanic, 'res/titanic.txt',
+            row.names = FALSE)
+
+titanicDf <- read.table(file = 'res/titanic.txt',
+                        sep='',header = T)
+View(titanicDf)
+write.csv(titanicDf, 'res/titanic.csv',
+          row.names = F, quote = T)
+
+library(writexl)
+write_xlsx(x=titanicDf, path = 'res/titanic.xlsx',
+           col_names = T)
+
+
