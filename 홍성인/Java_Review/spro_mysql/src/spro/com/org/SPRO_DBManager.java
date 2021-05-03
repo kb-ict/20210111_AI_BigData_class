@@ -21,7 +21,7 @@ public class SPRO_DBManager {
 		ResultSet rs = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/spro", "root", "1234");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/spro", "root", "1234");
 			pstmt = conn.prepareStatement(""
 					+ "SELECT * FROM MEMBER " 
 					+ " WHERE ID=? AND PW=? "

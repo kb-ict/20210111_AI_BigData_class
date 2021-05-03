@@ -103,9 +103,10 @@
 				<Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
 				
-			
-			
-			<Context docBase="spro_mysql" path="/spro1" reloadable="true" source="org.eclipse.jst.jee.server:spro_mysql"/></Host>
+				
+				
+				
+			<Context docBase="spro_mysql" path="/spro" reloadable="true" source="org.eclipse.jst.jee.server:spro_mysql"/></Host>
 		</Engine>
 	</Service>
 </Server>
