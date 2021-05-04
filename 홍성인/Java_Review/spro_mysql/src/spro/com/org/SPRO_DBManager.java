@@ -6,12 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class SPRO_DBManager {
-	String ora_class = "oracle.jdbc.driver.OracleDriver";
-	String mysql_class = "com.mysql.cj.jdbc.Driver";
-	String ora_url = "jdbc:oracle:thin:@localhost:1521:xe";
-	String mysql_url = "jdbc:mysql://127.0.0.1:3306/spro?useUnicode=true&characterEncoding=utf8";
-	String mysql_id = "root";
-	String mysql_pw = "1234";
 	
 	public SPRO_MEMBER ckLogin(String id,String pw) {
 		SPRO_MEMBER member = null;
@@ -57,8 +51,8 @@ public class SPRO_DBManager {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try{  // ojcbc jar 추가 확인
-		Class.forName(mysql_class);
-	    conn = DriverManager.getConnection(mysql_url,mysql_id,mysql_pw);
+		Class.forName(DBinfo.mysql_class);
+	    conn = DriverManager.getConnection(DBinfo.mysql_url,DBinfo.mysql_id,DBinfo.mysql_pw);
 
 		pstmt = conn.prepareStatement(
 				"INSERT INTO "+ 
@@ -95,8 +89,8 @@ public class SPRO_DBManager {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try{  // ojcbc jar 추가 확인
-		Class.forName(mysql_class);
-	    conn = DriverManager.getConnection(mysql_url,mysql_id,mysql_pw);
+		Class.forName(DBinfo.mysql_class);
+	    conn = DriverManager.getConnection(DBinfo.mysql_url,DBinfo.mysql_id,DBinfo.mysql_pw);
 
 		pstmt = conn.prepareStatement(
 				"INSERT INTO "+ 
