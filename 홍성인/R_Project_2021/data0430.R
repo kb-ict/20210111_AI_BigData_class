@@ -46,3 +46,39 @@ pi <- function(n) {
 
 pi(10)
 
+#===============================[Thu/6/May/2021]================================
+
+runif(5,0,1)
+
+coinTest <- function(n){
+  r <- runif(n,0,1)
+  res <- c()
+  for (i in 1:n) {
+    if (r[i] <= 0.5) {
+      res[i] <- 0
+    }
+    else {
+      res[i] <- 1
+    }
+  }
+  return(res)
+}
+
+res <- coinTest(5)
+res
+hist(res)
+
+#===============================================================================
+
+monteTest <- function(n) {
+  cnt <- 0
+  for (i in 1:n) {
+    cnt <- cnt + coinTest(1)
+  }
+  result <- cnt / n
+  return(result)
+}
+
+monteTest(2)
+monteTest(10000)
+monteTest(1000000)
