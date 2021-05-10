@@ -44,12 +44,18 @@
 		$('#logout').on('click',function(){
 			location.href='logout.jsp';
 		})
+		$('#chart').on('click',function(){
+			location.href='dg/dgmain.jsp'
+		});
 	})
 </script>
 
 </head>
 <body>
 	<div class="jumbotron">
+		<div class="row">
+			<input class="btn btn-primary ml-2 ml-2" id="chart" value="차트"/>
+		</div>
   		<h1>My Study Page</h1>
   		<p>Raise and raised again till a lamb becomes a lion!</p>
   		
