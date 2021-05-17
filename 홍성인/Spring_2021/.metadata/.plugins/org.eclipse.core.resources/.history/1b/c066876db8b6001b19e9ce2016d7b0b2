@@ -1,0 +1,8 @@
+package chap02;
+
+public class MHMain {
+	public static void main(String[] args) {
+		// spring framework = jsp + 스프링객체 컨테이너를 활용해서 객체생성하여 웹 프로그래밍을 하는것
+		
+	}
+}

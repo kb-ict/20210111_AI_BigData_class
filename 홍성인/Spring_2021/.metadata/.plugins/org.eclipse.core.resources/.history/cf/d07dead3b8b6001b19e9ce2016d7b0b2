@@ -1,0 +1,17 @@
+package chap02;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class MHMain {
+	public static void main(String[] args) {
+		// spring framework = jsp + 스프링객체 컨테이너를 활용해서 객체생성하여 웹 프로그래밍을 하는것
+		AnnotationConfigApplicationContext acac =
+				new AnnotationConfigApplicationContext(MhContext.class);
+		
+		AA aa1 = acac.getBean(AA.class);
+		System.out.println(aa1);
+		
+		AA aa2 = acac.getBean(AA.class);
+		System.out.println(aa2);
+	}
+}
