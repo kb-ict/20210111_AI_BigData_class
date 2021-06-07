@@ -5,9 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-<form action="imgprint" enctype="multipart/form-data" method="post">
-    <input type="file" name="file">
-    <input type="submit" value="저장">
-</form>
+<div style="padding:30px;margin-bottom:30px;background-color:yellow">
+    <form action="imgprint" enctype="multipart/form-data" method="post">
+        <input type="file" name="file">
+        <input type="submit" value="저장">
+    </form>
+</div>
+<div style="padding:30px;margin-bottom:30px;background-color:green">
+    <form action="/addimg" enctype="multipart/form-data" method="post">
+        <input type="file" name="file1">
+        <input type="file" name="file2">
+        <input type="submit" value="저장">
+    </form>
+</div>
 </body>
 </html>

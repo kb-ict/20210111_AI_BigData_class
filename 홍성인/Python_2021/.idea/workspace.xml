@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac804509-1af5-4ca0-bd04-2fdc28a5ba98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/print1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject0607/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/npcat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/npcat.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/print.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/print.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

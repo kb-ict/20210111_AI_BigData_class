@@ -54,6 +54,25 @@ def imgprint():
 
     return render_template("print.html",orifile=filename,chfile=chfile,exfile=exfile,shfile=shfile,mfile=mfile,anfile=anfile)
 
+@app.route("/addimg", methods=["POST"])
+def addimg():
+    file1 = request.files['file1']
+    file2 = request.files['file2']
+    file1name = f"/static/{file1.filename}"
+    file2name = f"/static/{file2.filename}"
+    file1.save(file1name)
+    file2.save(file2name)
+
+    arr1 = cv2.imread(file1name)
+    arr2 = cv2.imread(file2name)
+    addcv2 = cv2.add(arr1,arr2)
+    nparr3 = arr1 + arr2
+    cv2filename = "f/static/saimg.jpg"
+    npfilename = "f/static/nimg.jpg"
+    cv2.imwrite(cv2filename,addcv2)
+    cv2.imwrite(npfilename,nparr3)
+    return  render_template("print1.html",cv2filename=cv2filename,npfilename=npfilename)
+
 # @app.route("/upload",methods=['POST'])
 # def upload():
 #     image = request.files['file']
