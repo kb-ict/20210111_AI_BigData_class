@@ -1,0 +1,7 @@
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\bin\Debug\ClassTest1.exe.config
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\bin\Debug\ClassTest1.exe
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\bin\Debug\ClassTest1.pdb
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\obj\Debug\ClassTest1.csprojAssemblyReference.cache
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\obj\Debug\ClassTest1.csproj.CoreCompileInputs.cache
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\obj\Debug\ClassTest1.exe
+D:\MysecondRepository_20210402\C#\ClassTest1\ClassTest1\obj\Debug\ClassTest1.pdb

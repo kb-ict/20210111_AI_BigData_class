@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClassTest2",
+    "\\ClassTest2\\Common",
+    "\\ClassTest2\\Controll",
+    "\\ClassTest2\\Main",
+    "\\ClassTest2\\Model",
+    "\\ClassTest2\\Util",
+    "\\ClassTest2\\View"
+  ],
+  "SelectedNode": "\\ClassTest2\\Model\\Deal.cs",
+  "PreviewInSolutionExplorer": false
+}

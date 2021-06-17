@@ -1,0 +1,7 @@
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\bin\Debug\Test0407.exe.config
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\bin\Debug\Test0407.exe
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\bin\Debug\Test0407.pdb
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\obj\Debug\Test0407.csprojAssemblyReference.cache
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\obj\Debug\Test0407.csproj.CoreCompileInputs.cache
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\obj\Debug\Test0407.exe
+D:\MysecondRepository_20210402\C#\Test0407\Test0407\obj\Debug\Test0407.pdb
