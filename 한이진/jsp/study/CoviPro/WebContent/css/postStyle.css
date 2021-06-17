@@ -1,0 +1,33 @@
+@charset "EUC-KR";
+	nav{
+		
+		font-family: 'Black Han Sans', sans-serif;
+	}
+h1{
+		font-family: 'Black Han Sans', sans-serif;
+		font-weight: bold;
+	}
+h2{
+		font-family: 'Black Han Sans', sans-serif;
+		font-weight: bold;
+	}
+nav>a{
+	color:#8878BF;
+	font-weight: bold;
+	}
+nav>ul>li>a{
+		color:#A3B5D9;
+		font-weight: bold;
+	}
+
+nav>a:hover{color:#D8806C;}
+nav>ul>li>a:hover{	color:#6CCED9;}
+
+	a{
+		color:#435C73;
+		font-weight: bold;
+	}
+	a:hover{color:#6CCED9;}
+	.active {
+    	color: #6CCED9;	
+	}

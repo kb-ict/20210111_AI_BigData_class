@@ -1,0 +1,39 @@
+@charset "EUC-KR";
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Recursive:wght@500;800;900;904&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+	.tablinks{margin-left:40px;}
+	
+	
+	form{
+		display:inline;
+		padding-left: 0px;
+		padding-right: 0px;
+		}
+	label{
+		color: #260273;
+		font-family: 'Black Han Sans', sans-serif;
+		font-weight: bold;
+		}
+	h1{
+		display: inline;
+    	color:#BF7597;
+    	font-family: 'Recursive', sans-serif;
+    	font-weight: bold;
+    	}
+	p{font-family: 'Black Han Sans', sans-serif;}
+	nav{background-color:#1760BF;}
+	a{
+		color:#F2F2F2;;
+		font-weight: bold;
+	}
+	a:hover{color:#E0F252;}
+	table{
+		font-family: 'Black Han Sans', sans-serif;
+		text-align: center;
+	}
+	table>tbody{
+		font-family: 'Nanum Pen Script', cursive;
+		font-size: 32px;
+	}
