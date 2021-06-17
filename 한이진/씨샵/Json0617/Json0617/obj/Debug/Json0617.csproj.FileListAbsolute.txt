@@ -1,0 +1,13 @@
+D:\C-_study\Json0617\Json0617\bin\Debug\Json0617.exe.config
+D:\C-_study\Json0617\Json0617\bin\Debug\Json0617.exe
+D:\C-_study\Json0617\Json0617\bin\Debug\Json0617.pdb
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.csprojAssemblyReference.cache
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.Form1.resources
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.Properties.Resources.resources
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.csproj.GenerateResource.cache
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.csproj.CoreCompileInputs.cache
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.exe
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.pdb
+D:\C-_study\Json0617\Json0617\bin\Debug\Newtonsoft.Json.dll
+D:\C-_study\Json0617\Json0617\bin\Debug\Newtonsoft.Json.xml
+D:\C-_study\Json0617\Json0617\obj\Debug\Json0617.csproj.CopyComplete

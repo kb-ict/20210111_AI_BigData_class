@@ -1,0 +1,15 @@
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\ReadWriteJson0616.exe.config
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\ReadWriteJson0616.exe
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\ReadWriteJson0616.pdb
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.csprojAssemblyReference.cache
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Form1.resources
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Properties.Resources.resources
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.csproj.GenerateResource.cache
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.csproj.CoreCompileInputs.cache
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.exe
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.pdb
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\Newtonsoft.Json.dll
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\Newtonsoft.Json.xml
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.csproj.CopyComplete
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Form2.resources
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Form3.resources

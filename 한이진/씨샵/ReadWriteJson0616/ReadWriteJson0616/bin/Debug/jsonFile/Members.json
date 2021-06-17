@@ -1,0 +1,27 @@
+{
+  "members": {
+    "member": [
+      {
+        "id": 1,
+        "name": "yh",
+        "pw": "34",
+        "tel": "34324",
+        "address": "fgsg"
+      },
+      {
+        "id": 2,
+        "name": "yj",
+        "pw": "29430",
+        "tel": "010-2994-3930",
+        "address": "seoul"
+      },
+      {
+        "id": "3",
+        "name": "sj",
+        "pw": "29430",
+        "tel": "010-2994-3932",
+        "address": "deogu"
+      }
+    ]
+  }
+}
