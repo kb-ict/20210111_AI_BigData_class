@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="02_last_que.js"></script>
+</head>
+<body>
+    <script>
+//         //형변환
+//         let ex ="1234"
+//         console.log(ex)
+//         console.log((typeof(ex)))
+//         console.log(ex+10)
+//         console.log(typeof(Number(ex)))
+//         console.log(Number(ex)+10)
+//         let ex2 =100
+//         console.log(ex2+10)
+//         console.log(String(ex2)+10)
+
+//         console.log(Number("abc"))//NaN not a number
+
+//         console.log(typeof(273+"")) // string 273+"" :빈문자열을 연결해 문자열 자료형으로 변환
+// //inch -> cm
+//         const input = prompt("inch 단위 숫자 입력") //반환하는 형이 String
+//         const inch= Number(input) //숫자형으로 변환
+//         const cm=inch*2.54
+//         console.log(`${inch}inch는 ${cm}cm입니다.`)
+
+        // const num = prompt("cm 입력 ")
+        // const cm = Number(num)
+        // const inch= cm*0.393701
+        // console.log(`${cm}cm는 ${inch}inch 입니다.`)
+
+        const num2= prompt("원의 반지름을 입력해주세요.")
+        const r= Number(num2)
+        const pi=3.14
+        const r2= pi*r *r
+        const r3=2*pi*r
+        console.log(`원의 반지름: ${r}`)
+        console.log(`원의 넓이: ${r2} `)
+        console.log(`원의 둘레: ${r3}`)
+        console.log(`원의 넓이${pi*r*r}, 원의 둘레 ${2*pi*r}`)
+
+
+        const input =prompt("달러 단위의 금액을 입력해주세요")
+        var dal= Number(input)
+        var won= dal*1207
+        console.log(`달러: ${dal}`)
+        console.log(`원화: ${won}`)
+        console.log(`원화: ${dal*1207}`)
+
+    </script>
+</body>
+</html>

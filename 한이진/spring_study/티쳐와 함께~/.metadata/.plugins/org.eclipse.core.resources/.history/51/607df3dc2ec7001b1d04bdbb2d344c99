@@ -1,0 +1,7 @@
+package yj0607.cls;
+public class Calc{
+	public void doCalc() {
+		System.out.println("계산하는 함수");
+	}
+
+}

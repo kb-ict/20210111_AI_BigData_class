@@ -1,0 +1,27 @@
+<body>
+    <h1 id="one">첫번째</h1>
+    <h1 id="two">두번째</h1>
+    <h1 id="three">세번째</h1>
+    <script>
+        function welcome()
+        {
+            alert("안녕하세요")
+        }
+        // 화면이 불러오자마자 실행되는 것
+        document.addEventListener('DOMContentLoaded',welcome)
+
+        let one = document.querySelector('#one')
+        one.addEventListener('click',
+        (event)=>
+        {//클릭시 글자가 빨간색이 되도록 함
+            one.style.color="red"
+        })
+
+        let two=document.querySelector('#two')
+        two.addEventListener('click',
+        (event)=>{two.style.backgroundColor='springgreen'})
+
+        let three=document.querySelector('#three')
+        three.onclick=function(){three.style.color='blue'}
+    </script>
+</body>

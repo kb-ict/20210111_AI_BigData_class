@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="freeboard">
+	<insert id="insert" parameterType="com.org.mbat.freeboard.Board">
+		INSERT INTO freeboard
+		(TITLE, PASS, CONTENT, WDATE, NAME, EMAIL)
+		VALUES (#{title},'1234',#{content}, now(),#{name},#{email});
+	</insert>
+	<select id="select" parameterType="java.lang.Integer" resultType="com.org.mbat.freeboard.Board">
+		SELECT * FROM FREEBOARD
+		order by idx asc
+		limit #{start},10;
+	</select>
+</mapper>

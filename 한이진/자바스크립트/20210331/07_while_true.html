@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //보통 while문 쓰는 방법
+        // break 문 이용
+        let count=0;
+        while(true)
+        {
+            count++
+            if(count>100)
+                break
+        }
+        alert(count) //101
+        //break 안쓰고 할 경우
+        count=0;
+        while(count<100)
+        {
+            count++
+            alert(count)
+        }
+
+        //continue 이용
+        while(true)
+        {
+            if(count%2==0)
+                continue // continue 아래 코드를 실행하지 않음 
+            else
+                count++
+        }
+
+        alert('continue')
+        let sum=0;
+        let sum2=0;
+        for(let i = 0; i<101; i++)
+        {
+            //continue가 없는 코드
+            if(i%2!=0)
+                sum2+=i
+
+            //continue를 쓴 코드
+            if(i%2==0)
+                continue
+            else
+                sum+=i;
+
+            console.log(i)
+        }
+        alert(sum)
+        alert(sum2)
+
+        while(true)
+        {
+            if(count%2==0)
+            {
+                count++
+                continue
+            }
+            else
+                count++
+
+            alert(count)
+        }
+    </script>
+</body>
+</html>

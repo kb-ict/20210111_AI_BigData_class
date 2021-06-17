@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input=[] // 배열이 유동적으로 늘어남으로 빈칸 초기화
+       for(let i =0; i<5;i++)
+       {
+           input[i]= Number(prompt((Number(i)+1)+"번째 값은?"))
+            //Number로 감싸 숫자로 형변환! prompt는 문자열로 값을 저장
+       } 
+       alert(input)
+       //위에 prompt를 Number로 감싸지 않을 때는 각 각 감싸서 형변환
+       let min=Number(input[0]) 
+       let max=Number(input[0])
+
+       for(let i=0; i<input.length;i++ )
+       {
+            if(min>input[i])
+                min=input[i]
+            if(max<input[i])
+                max=input[i]
+           
+       }
+       alert(`최소값: ${min}`)
+       alert(`최댓값: ${max}`)
+    </script>
+</body>
+</html>

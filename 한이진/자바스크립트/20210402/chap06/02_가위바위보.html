@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: absolute;
+        }
+        button{
+            
+            left: 50px;
+            width: 100px;
+            height: 70px;
+            color: coral;
+            font-size: 32px;
+            background-color: cadetblue;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        h1{
+            color: crimson;
+            
+        }
+    </style>
+</head>
+<body>
+    <button id="가위" onclick="start('가위')">가위</button>
+    <button id="바위"  onclick="start('바위')">바위</button>
+    <button id="보"  onclick="start('보')">보</button>
+    
+    <div></div>
+
+    나 
+    <img id="mine">
+    컴퓨터
+    <img id="computer">
+    <h1 id="result">결과</h1>
+
+    <script>
+        function start(mine)
+        {
+            console.log('나: '+mine)
+            const RSP=['가위','바위','보']
+            const computer= RSP[Math.floor(Math.random()*3)]
+            console.log('컴퓨터: '+computer)
+            let myresult=document.getElementById('mine')
+            let computerresult=document.getElementById('computer')
+            let result=document.getElementById('result')
+            switch(mine)
+            {
+                case '가위':
+                myresult.src='1.png'
+                    switch(computer)
+                    {
+                        case '가위':
+                            console.log('비김')
+                            computerresult.src='1.png'
+                            result.innerText='비김'
+                            break
+                        case '바위':
+                            console.log('짐')
+                            computerresult.src='2.jpg'
+                            result.innerText='짐'
+                            break
+                        case '보':
+                            console.log('이김')
+                            computerresult.src='3.jpg'
+                            result.innerText='이김'
+                            break
+                    }
+                    break
+                case '바위':
+                myresult.src='2.jpg'
+                    switch(computer)
+                    {
+                        case '가위':
+                        computerresult.src='1.png'
+                            console.log('이김')
+                            result.innerText='이김'
+                            break
+                        case '바위':
+                        computerresult.src='2.jpg'
+                            console.log('비김')
+                            result.innerText='비김'
+                            break
+                        case '보':
+                        computerresult.src='3.jpg'
+                            console.log('짐')
+                            result.innerText='짐'
+                            break
+                    }
+                    break
+                case '보':
+                myresult.src='3.jpg'
+                    switch(computer)
+                    {
+                        case '가위':
+                        computerresult.src='1.png'
+                            console.log('짐')
+                            result.innerText('짐')
+                            break
+                        case '바위':
+                        computerresult.src='2.jpg'
+                            console.log('이김')
+                            result.innerText='이김'
+                            break
+                        case '보':
+                        computerresult.src='3.jpg'
+                            console.log('비김')
+                            result.innerText('비김')
+                            break
+                    }
+                    break
+            }
+        }
+        //start('가위')//내가 가위를 낸 경우
+        //start('바위')
+        //start('보')
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+package com.org.mbat;
+
+public class AAA {
+	private int a= 10;
+	public AAA(int a) {
+		super();
+		this.a=a;
+	}
+}

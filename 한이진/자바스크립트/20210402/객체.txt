@@ -1,0 +1,236 @@
+let product=
+{
+    제품명: '망고',  //키(속성): 값
+    유형 : '당절임',
+    원산지: '필리핀'
+}
+
+console.log(product)
+console.log(product.제품명)
+console.log(product.유형)
+console.log(product.원산지)
+
+{ '제품명': '망고', '유형': '당절임', '원산지': '필리핀' }
+망고
+당절임
+필리핀
+
+let student_hyj=
+{
+    name: '한이진',
+    phone: 123455,
+    '가장 좋아하는 사람': ['김경숙', '한영석'],
+    '가장 좋아하는 음식': '다좋앙',
+    eat: function(food){
+        console.log(food+"냠냠냠")
+    },
+    number : [1,2,3,4,5],
+    introduce: function(){console.log('내 이름은'+ this.name+'입니다.')}
+}
+console.log(student_hyj)
+console.log()
+console.log(student_hyj.name)
+console.log(student_hyj.phone)
+console.log(student_hyj["가장 좋아하는 사람"])
+console.log(student_hyj["가장 좋아하는 음식"])
+student_hyj.eat('회')
+console.log(student_hyj.number)
+student_hyj.introduce()
+
+{
+  name: '한이진',
+  phone: 123455,
+  '가장 좋아하는 사람': [ '김경숙', '한영석' ],
+  '가장 좋아하는 음식': '다좋앙',
+  eat: [Function: eat],
+  number: [ 1, 2, 3, 4, 5 ],
+  introduce: [Function: introduce]
+}
+
+한이진
+123455
+[ '김경숙', '한영석' ]
+다좋앙
+회냠냠냠
+[ 1, 2, 3, 4, 5 ]
+내 이름은한이진입니다.
+
+student_hyj.newFunc=()=>{console.log('배열처럼 뒤늦게 추가하는 거 됩니다')}
+student_hyj.newFunc()
+student_hyj.직업='학생'
+console.log(student_hyj.직업)
+
+한이진
+123455
+[ '김경숙', '한영석' ]
+다좋앙
+회냠냠냠
+[ 1, 2, 3, 4, 5 ]
+내 이름은한이진입니다.
+배열처럼 뒤늦게 추가하는 거 됩니다
+학생
+
+//키(속성)을 지우기 가능
+delete student_hyj.phone
+
+console.log(student_hyj)
+
+{
+  name: '한이진',
+  '가장 좋아하는 사람': [ '김경숙', '한영석' ],
+  '가장 좋아하는 음식': '다좋앙',
+  eat: [Function: eat],
+  number: [ 1, 2, 3, 4, 5 ],
+  introduce: [Function: introduce],
+  newFunc: [Function (anonymous)],
+  '직업': '학생'
+}
+
+
+____________________________________________________________________
+const 한빛 =
+{
+    name:'혼자 공부하는 파이썬',
+    price: 18000,
+    publisher:'한빛미디어'
+}
+console.log("한빛미디어 책!"+한빛.name)
+console.log(한빛.name+"가격은 "+한빛.price)
+
+한빛미디어 책!혼자 공부하는 파이썬
+혼자 공부하는 파이썬가격은 18000
+_______________________________________________________________________
+let 대환장파티=
+{
+    배열: [
+        ()=>{console.log('ㅋㅋ')},
+        student_hyj,
+        [1,2,4],
+        {이름: '제니', 나이: 26}
+        ],
+        한빛
+}
+________________________________________________________________________
+// Math 객체(js에서 제공해주는 객체. Number 객체 등등도 있으나 생략!)
+const num= Math.random()
+
+console.log('0이상 1미만')
+console.log(num)
+
+console.log('랜덤 숫자 정수')
+console.log('-5 부터 5 사이의 값 ')
+console.log(Math.floor(num*10-5))
+console.log('1부터 10 사이의 값')
+console.log(Math.floor((num*10)+1))
+_____________________________________________________________________________________
+가위바위보
+<body>
+    <button id="가위" onclick="start('가위')">가위</button>
+    <button id="바위"  onclick="start('바위')">바위</button>
+    <button id="보"  onclick="start('보')">보</button>
+    
+    <div></div>
+
+    나 
+    <img id="mine">
+    컴퓨터
+    <img id="computer">
+    <h1 id="result">결과</h1>
+
+    <script>
+        function start(mine)
+        {
+            console.log('나: '+mine)
+            const RSP=['가위','바위','보']
+            const computer= RSP[Math.floor(Math.random()*3)]
+            console.log('컴퓨터: '+computer)
+            let myresult=document.getElementById('mine')
+            let computerresult=document.getElementById('computer')
+            let result=document.getElementById('result')
+            switch(mine)
+            {
+                case '가위':
+                myresult.src='1.png'
+                    switch(computer)
+                    {
+                        case '가위':
+                            console.log('비김')
+                            computerresult.src='1.png'
+                            result.innerText='비김'
+                            break
+                        case '바위':
+                            console.log('짐')
+                            computerresult.src='2.jpg'
+                            result.innerText='짐'
+                            break
+                        case '보':
+                            console.log('이김')
+                            computerresult.src='3.jpg'
+                            result.innerText='이김'
+                            break
+                    }
+                    break
+                case '바위':
+                myresult.src='2.jpg'
+                    switch(computer)
+                    {
+                        case '가위':
+                        computerresult.src='1.png'
+                            console.log('이김')
+                            result.innerText='이김'
+                            break
+                        case '바위':
+                        computerresult.src='2.jpg'
+                            console.log('비김')
+                            result.innerText='비김'
+                            break
+                        case '보':
+                        computerresult.src='3.jpg'
+                            console.log('짐')
+                            result.innerText='짐'
+                            break
+                    }
+                    break
+                case '보':
+                myresult.src='3.jpg'
+                    switch(computer)
+                    {
+                        case '가위':
+                        computerresult.src='1.png'
+                            console.log('짐')
+                            result.innerText('짐')
+                            break
+                        case '바위':
+                        computerresult.src='2.jpg'
+                            console.log('이김')
+                            result.innerText='이김'
+                            break
+                        case '보':
+                        computerresult.src='3.jpg'
+                            console.log('비김')
+                            result.innerText('비김')
+                            break
+                    }
+                    break
+            }
+        }
+        //start('가위')//내가 가위를 낸 경우
+        //start('바위')
+        //start('보')
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

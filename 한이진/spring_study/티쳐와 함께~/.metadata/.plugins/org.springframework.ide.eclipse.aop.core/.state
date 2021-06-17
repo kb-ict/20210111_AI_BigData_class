@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="20210525Web"/>
+<aop-project name="20210517"/>
+<aop-project name="mybatis">
+<aspect-definition advice-class-name="com.org.mbat.aop.MbatAspect" advice-method-name="doASC(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="14" aspect-name="mbatAspect" aspect-start-line-number="14" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/mybatis/src/main/java/com/org/mbat/conf/AppCtx.java" pointcut-expression="publicTarget()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:mybatis|3:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml|7:beans:beans:13|8:clsController:13" bean-file="/mybatis/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" bean-start-line="13" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/mybatis/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" source="=mybatis/src\/main\/java&lt;com.org.mbat.aop{MbatAspect.java[MbatAspect~doASC~QProceedingJoinPoint;" source-start-line="21" target="=mybatis/src\/main\/java&lt;com.org.mbat.cls{ClsController.java[ClsController~doa~QHttpServletRequest;" target-start-line="22"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:mybatis|3:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml|7:beans:beans:13|8:clsController:13" bean-file="/mybatis/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" bean-start-line="13" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/mybatis/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" source="=mybatis/src\/main\/java&lt;com.org.mbat.aop{MbatAspect.java[MbatAspect~doASC~QProceedingJoinPoint;" source-start-line="21" target="=mybatis/src\/main\/java&lt;com.org.mbat.cls{ClsController.java[ClsController~seeeionChk~QHttpServletRequest;" target-start-line="16"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="cha"/>
+<aop-project name="yj0531"/>
+<aop-project name="20210524Web"/>
+</aop-reference-model>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="n1">
+    <input type="text" name="" id="n2"> =
+    <span id="result">결과</span>
+    <div>
+        <input type="button" value="+" onclick="calc('+')">
+        <input type="button" value="-" onclick="calc('-')">
+        <input type="button" value="*" onclick="calc('*')">
+        <input type="button" value="/" onclick="calc('/')">
+    </div>
+    <script>
+        function calc(num)
+        {
+            let one=document.getElementById('n1').value
+            let two=document.getElementById('n2').value
+            let result=''
+            switch(num)
+            {
+                case '+':
+                    result= Number(one) + Number(two)
+                    break;
+                case '-':
+                    result=Number(one)- Number(two)
+                    break
+                case '*':
+                    result=Number(one)*Number(two)
+                    break
+                case '/':
+                    result=Number(one)/Number(two)
+                    break
+                default:
+                    alert("!?")
+                    result="!?"
+                    break
+            }
+            document.getElementById('result').innerText=result
+        }
+        
+    </script>
+</body>
+</html>

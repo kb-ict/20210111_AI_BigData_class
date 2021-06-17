@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: absolute;
+        }
+        h1{
+            color: deeppink;
+        }
+        input{
+            width: 100px;
+            height: 70px;
+            color: coral;
+            font-size: 32px;
+            background-color: cadetblue;
+        }
+        span{
+            color: rgb(23, 161, 241);
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>가위바위보</h1>
+
+    <div>
+        <h3>나의 선택?</h3>
+        <input type="button" value="가위" onclick="go(1)">
+        <input type="button" value="바위" onclick="go(2)">
+        <input type="button" value="보" onclick="go(3)">
+        <br>
+        <span id="result">나의 선택은? </span>
+        <img src="" alt="" id="img2">
+    </div>
+    <div>
+        <h3>과연 상대방은?</h3>
+        <span id="com">상대방은? </span>
+        <img src="" alt="" >
+    </div>
+    <br>
+    <div>
+        <span id='output'>승패?</span>
+    </div>
+    <script>
+        function go(n)
+        {
+            let result=''
+            let img=document.getElementsByTagName('img')[0]
+            switch(n)
+            {
+                case 1:
+                result='가위를 선택!'
+                img.src="1.png"
+                break
+                case 2:
+                result= '바위를 선택!'
+                img.src='2.jpg'
+                break
+                case 3:
+                result='보를 선택!'
+                img.src='3.jpg'
+                break
+
+            }
+            document.getElementById('result').innerText=result
+            document.getElementsByTagName('img').innerText=img
+            let com=''
+            let rel=''
+            const num=Math.random()
+            com=[Math.floor(Math.random()*3)]
+            let user=document.getElementById('result').vale
+            let img2=document.getElementById('img2')[0]
+            switch(com)
+            {
+                case 0:
+                rel='가위를 선택!'
+                img2.src="1.png"
+                break
+                case 1:
+                rel= '바위를 선택!'
+                img.src='2.jpg'
+                break
+                case 2:
+                rel='보를 선택!'
+                img2.src='3.jpg'
+                break
+            }
+            document.getElementById('com').innerText=rel
+            let output=''
+            switch(n)
+            {
+                case 1:
+                    switch(com)
+                    {
+                        case 1:
+                            output='비김'
+                            break
+                        case 2:
+                            output='짐'
+                            break
+                        case 3:
+                            output='이김'
+                            break
+                    }
+                break
+                case 2:
+                    switch(com)
+                    {
+                        case 1:
+                            output='이김'
+                            break
+                        case 2:
+                            output='비김'
+                            break
+                        case 3:
+                            output='짐'
+                            break
+                    }
+                break
+                case 3:
+                    switch(com)
+                    {
+                        case 1:
+                            output='짐'
+                            break
+                        case 2:
+                            output='이김'
+                            break
+                        case 3:
+                            output='비김'
+                            break
+                    }
+                break
+            }
+            document.getElementById('output').innerText=output
+        }
+        
+    </script>
+
+</body>
+</html>

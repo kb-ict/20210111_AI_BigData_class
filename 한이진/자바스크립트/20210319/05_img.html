@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 500px; 
+            /* padding:250px; */ 
+            display:block;
+            margin:auto;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="aa.jpg" alt="">
+    <script>
+        var img = document.getElementsByTagName('img')[0]
+        const input = prompt("태어난 해를 입력하세용", "")
+        img.src=(input%12)+".png"
+        // let year = input % 12
+        // switch (year) {
+        //     case 0:
+        //         alert('당신의 띠는 "원숭이" 입니다.');
+        //         img.src = '0.png';
+        //         break;
+        //     case 1:
+        //         alert('당신의 띠는 "닭" 입니다.');
+        //         img.src = '1.png';
+        //         break;
+        //     case 2:
+        //         alert('당신의 띠는 "개" 입니다.');
+        //         img.src = '2.png';
+        //         break;
+        //     case 3:
+        //         alert('당신의 띠는 "돼지" 입니다.');
+        //         img.src = '3.png';
+        //         break;
+        //     case 4:
+        //         alert('당신의 띠는 "쥐" 입니다.');
+        //         img.src = '4.png';
+        //         break;
+        //     case 5:
+        //         alert('당신의 띠는 "소" 입니다.');
+        //         img.src = '5.png';
+        //         break;
+        //     case 6:
+        //         alert('당신의 띠는 "호랑이" 입니다.');
+        //         img.src = '6.png';
+        //         break;
+        //     case 7:
+        //         alert('당신의 띠는 "토끼" 입니다.');
+        //         img.src = '7.png';
+        //         break;
+        //     case 8:
+        //         alert('당신의 띠는 "용" 입니다.');
+        //         img.src = '8.png';
+        //         break;
+        //     case 9:
+        //         alert('당신의 띠는 "뱀" 입니다.');
+        //         img.src = '뱀.png';
+        //         break;
+        //     case 10:
+        //         alert('당신의 띠는 "말" 입니다.');
+        //         img.src = '10.png';
+        //         break;
+        //     case 11:
+        //         alert('당신의 띠는 "양" 입니다.');
+        //         img.src = '11.png';
+        //         break;
+        // }
+    </script>
+</body>
+
+</html>

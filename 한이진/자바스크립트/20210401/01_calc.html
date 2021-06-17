@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="숫자1" id="s1">
+        <input type="text" name="숫자2" id="s2">
+        <span id="r1">덧셈 결과</span>
+        <div>
+            <input type="button" value="+" onclick="sum()">
+        </div>
+    </div>
+    <div>
+        <input type="text" name="숫자1" id="m1">
+        <input type="text" name="숫자2" id="m2">
+        <span id="r2">뺄셈 결과</span>
+        <div>
+            <input type="button" value="-" onclick="min()">
+        </div>
+    </div>
+    <div>
+        <input type="text" name="숫자1" id="mul1">
+        <input type="text" name="숫자2" id="mul2">
+        <span id="r3">곱셈 결과</span>
+        <div>
+            <input type="button" value="*" onclick="mul()">
+        </div>
+    </div>
+    <div>
+        <input type="text" name="숫자1" id="d1">
+        <input type="text" name="숫자2" id="d2">
+        <span id="r4">나눗셈 결과</span>
+        <div>
+            <input type="button" value="/" onclick="div()">
+        </div>
+    </div>
+    <script>
+        function sum()
+        {
+            let n1= document.getElementById('s1').value
+            let n2= document.getElementById('s2').value
+            let sum= Number(n1)+Number(n2)
+            alert(sum)
+            document.getElementById('r1').innerText=sum
+        }
+        function min()
+        {
+            let n1= document.getElementById('m1').value
+            let n2= document.getElementById('m2').value
+            let min= Number(n1) - Number(n2)
+            alert(min)
+            document.getElementById('r2').innerText=min
+        }
+        function mul()
+        {
+            let n1= document.getElementById('mul1').value
+            let n2= document.getElementById('mul2').value
+            let mul= Number(n1)*Number(n2)
+            alert(mul)
+            document.getElementById('r3').innerText=mul
+        }
+        function div()
+        {
+            let n1= document.getElementById('d1').value
+            let n2= document.getElementById('d2').value
+            let div= Number(n1)/Number(n2)
+            alert(div)
+            document.getElementById('r4').innerText=div
+        }
+        
+    </script>
+</body>
+</html>

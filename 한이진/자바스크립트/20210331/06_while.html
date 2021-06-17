@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(confirm('계속할까?'))  // 확인은 true, 취소는 false 
+            alert('.....') // true일 때 계속 실행
+        alert("while문 빠져나감") // false 반복문 빠져나감 
+
+        let count=0; 
+        while(count<5) 
+        {
+            console.log('안녕')
+            alert((Number(count)+1)+'번째 용사여')
+            count++
+        }
+        alert((Number(count)+1)+'번째 용사여 세상을 구하라.') 
+
+        for(let count =0; count<5; count++) // for문 안에 let count 선언 빠져나가면 소멸
+        {
+            console.log('안녕')
+            alert((Number(count)+1)+'번째 용사여')
+        }
+       
+        for(ABC=0; ABC<5; ABC++)
+        {
+            alert('hello~')
+        }
+        alert(ABC) // 5
+
+        오호='ㅋㅋㅋ';
+        alert(오호)
+    </script>
+</body>
+</html>

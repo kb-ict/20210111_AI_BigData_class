@@ -1,0 +1,16 @@
+package com.org.mbat.cls;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class ClsController {
+	
+	@RequestMapping("/aop")
+	public String doA(HttpServletRequest request) {
+		System.out.println("여기에서 aop 실행");
+		return "aop/doA";
+	}
+}

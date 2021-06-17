@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const input= Number(prompt("태어난 해 입력",""))
+        // const year= input%12
+        // let result
+        // if(year===0){result='원숭이'}
+        // else if(year===1){result='닭'}
+        // else if(year===2){result='개'}
+        // else if(year===3){result='돼지'}
+        // else if(year===4){result='쥐'}
+        // else if(year===5){result='소'}
+        // else if(year===6){result='호랑이'}
+        // else if(year===7){result='토끼'}
+        // else if(year===8){result='용'}
+        // else if(year===9){result='뱀'}
+        // else if(year===10){result='말'}
+        // else if(year===11){result='양'}
+        // console.log(`태어난 해가 ${input}이라면 띠는 ${result}입니다.`)
+
+
+        // switch(year){
+        //     case 0: console.log('원숭이'); break;
+        //     case 1: console.log('닭'); break;
+        //     case 2: console.log("개"); break;
+        //     case 3: console.log("돼지")
+        // }
+        // const rawInput=prompt("") 
+        const rawInput = Number(prompt("태어난 해를 입력", ''))
+        const y = rawInput % 10
+        const year = rawInput % 12
+
+        let r
+        switch (y) {
+            case 0:
+                r = '경';
+                break;
+            case 1:
+                r = '신';
+                break;
+            case 2:
+                r = '임';
+                break;
+            case 3:
+                r = '계';
+                break;
+            case 4:
+                r = '갑';
+                break;
+            case 5:
+                r = '을';
+                break;
+            case 6:
+                r = '병';
+                break;
+            case 7:
+                r = '무';
+                break;
+            case 8:
+                r = '기';
+                break;
+            case 9:
+                r = '계'
+        }
+
+        let dd
+        switch (year) {
+            case 0:
+                dd = '신';
+                break;
+            case 1:
+                dd = '유';
+                break;
+            case 2:
+                dd = '술';
+                break;
+            case 3:
+                dd = '해';
+                break;
+            case 4:
+                dd = '자';
+                break;
+            case 5:
+                dd = '축';
+                break;
+            case 6:
+                dd = '인';
+                break;
+            case 7:
+                dd = '묘';
+                break;
+            case 8:
+                dd = '진';
+                break;
+            case 9:
+                dd = '사';
+                break;
+            case 10:
+                dd = '오';
+                break;
+            case 11:
+                dd = '미';
+                break;
+            case 12:
+                dd = '신';
+                break;
+        }
+        alert(`${rawInput}년은 ${r}${dd}년 입니다.`)
+    </script>
+</body>
+
+</html>
