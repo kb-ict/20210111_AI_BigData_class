@@ -1,0 +1,84 @@
+package teamProject;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class SelectCusromer extends JFrame {
+
+	JTable table;
+
+	Connection conn = null;
+	PreparedStatement pstm = null;
+	ResultSet rs = null;
+	
+	private JTable table_1;
+
+	public SelectCusromer() {
+		getContentPane().setLayout(null);
+
+		table_1 = new JTable();
+		table_1.setModel(new DefaultTableModel(new Object[][] { { null, null, null, null, null, null }, },
+				new String[] { "ID", "NAME", "GENDER", "BIRTHYEAR", "ADDRESS", "PHONE" }));
+		table_1.setBounds(0, 0, 444, 266);
+		getContentPane().add(table_1);
+		setVisible(true);
+		setSize(460, 305);
+
+		conn = DBCONN.getConnection();
+
+		this.table = table_1;
+
+		try {
+
+			String str[] = new String[6];
+			DefaultTableModel model = (DefaultTableModel) table_1.getModel();
+			model.setNumRows(0);
+			String quary = "SELECT * FROM customer";
+			pstm = conn.prepareStatement(quary);
+			rs = pstm.executeQuery();
+
+			while (rs.next()) {
+
+				str[0] = rs.getString("ID");
+				str[1] = rs.getString("NAME");
+				str[2] = rs.getString("GENDER");
+				str[3] = rs.getString("BIRTHYEAR");
+				str[4] = rs.getString("ADDRESS");
+				str[5] = rs.getString("PHONE");
+
+				model = (DefaultTableModel) table.getModel();
+				model.addRow(str);
+
+			}
+
+		} catch (Exception ex) {
+			// TODO: handle exception
+			ex.printStackTrace();
+		} finally {
+			try {
+				conn.close();
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstm != null) {
+					pstm.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+
+			} catch (Exception e2) {
+				// TODO: handle exception
+				e2.printStackTrace();
+			}
+
+		}
+	}
+	
+}
